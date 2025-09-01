@@ -1,3 +1,6 @@
+
+@use "../../styles/global.scss" as*;
+
 nav {
   height: 100px;
   position: fixed;
@@ -30,7 +33,7 @@ nav {
           transition: 0.3s;
 
           &:hover {
-            color: #000;
+            color: $primary-color;
           }
         }
       }
