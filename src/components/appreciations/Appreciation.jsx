@@ -7,7 +7,7 @@ import CountUp from "react-countup";
 
 export default function Appreciation() {
   useEffect(() => {
-    AOS.init({ duration: 2000, once: false });
+    AOS.init({ duration: 800, once: false });
   }, []);
 
   return (

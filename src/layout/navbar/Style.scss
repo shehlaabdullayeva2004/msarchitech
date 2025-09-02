@@ -2,12 +2,13 @@
 @use "../../styles/global.scss" as*;
 
 nav {
-  height: 100px;
+  height: 80px;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   color: #fff;
+  background-color: #fff;
   .navbar {
     height: 100%;
     padding: 0 7%;
@@ -28,7 +29,8 @@ nav {
         margin-left: 20px;
 
         a {
-          color: #fff;
+            color: #000;
+
           text-decoration: none;
           transition: 0.3s;
 
