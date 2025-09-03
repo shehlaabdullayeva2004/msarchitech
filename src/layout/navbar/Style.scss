@@ -2,19 +2,20 @@
 @use "../../styles/global.scss" as*;
 
 nav {
-  height: 80px;
+  height: 90px;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   color: #fff;
-  background-color: #fff;
   .navbar {
     height: 100%;
     padding: 0 7%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  transition: background-color 300ms ease, color 0.2s ease;
+
     .nav-logo img {
       width: 70px;
       height: 60px;
@@ -26,10 +27,9 @@ nav {
       margin: 0;
       list-style: none;
       li {
-        margin-left: 20px;
+        margin-left: 40px;
 
         a {
-            color: #000;
 
           text-decoration: none;
           transition: 0.3s;

@@ -1,0 +1,32 @@
+
+@use "../../styles/global.scss" as *;
+#who-are-we{
+    background-color:$primary-background;
+    color: #ffff;
+    padding: 5rem 5%;
+
+    .section-top{
+        padding-bottom: 30px;
+        h1{
+            padding-bottom: 30px;
+        }
+        p{
+            color: $primary-text-color;
+        }
+    }
+    .section-bottom{
+        height: 50vh;
+    }
+}
+@media (max-width:576px){
+    .who-are-we-sec{
+        .section-top{
+            p{
+                font-size: 14px !important;
+            }
+        }
+        .section-bottom{
+            height: 30vh !important;
+        }
+    }
+}

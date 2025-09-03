@@ -38,14 +38,19 @@ export default function Appreciation() {
             </div>
             <div className="counter col">
               <h1>
-                <CountUp end={100}  duration={4} /> <span>+</span>
+                <CountUp end={100} duration={4} /> <span>+</span>
               </h1>
               <p>Layihə </p>
             </div>
           </div>
         </div>
-        <div className="right-side col-12 col-md-12 col-lg-6" data-aos="fade-left">
-          <img src={AppreciationImg} alt="" />
+        <div
+          className="right-side col-12 col-md-12 col-lg-6"
+          data-aos="fade-left"
+        >
+          <div className="div">
+            <img src={AppreciationImg} alt="" />
+          </div>
         </div>
       </div>
     </section>

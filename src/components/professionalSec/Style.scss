@@ -1,0 +1,81 @@
+@use "../../styles/global.scss" as *;
+
+#professional {
+  background-color: $primary-background;
+  color: #ffff;
+  list-style-type: circle !important;
+  min-height: 60vh;
+  padding: 7rem 5%;
+  .left-side {
+    min-height: 80vh;
+    padding-right: 5%;
+  }
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .top {
+      border-bottom: 1px solid #e2e2e2;
+      padding-bottom: 30px;
+      h1 {
+        padding-bottom: 30px;
+        font-size: 42px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+    .bottom {
+        padding-top: 40px;
+        p{
+            color: $primary-text-color;
+        }
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 0;
+        li{
+            color: $primary-text-color;
+        }
+
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  #professional {
+    .professional {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .left-side {
+      min-height: 50vh !important;
+      padding: 2rem 0;
+    }
+    .right-side {
+      .top {
+        padding-bottom: 10px !important;
+        h1 {
+          font-size: 30px !important;
+        }
+        p {
+          font-size: 16px !important;
+        }
+      }
+      .bottom{
+        padding-top: 20px !important;
+        p{
+            font-size: 14px !important;
+
+        }
+        ul{
+            padding-top: 10px;
+            li{
+                font-size: 14px !important;
+            }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use "../../styles/global.scss" as *;
+
+#about-hero-sec {
+  background-color: $primary-background;
+  .about-hero {
+    background-image: url("../../assets/images/sectionHead.png");
+    height: 45vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    h1 {
+      font-size: 46px;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .about-hero {
+    height: 40vh !important;
+  }
+  h1 {
+    font-size: 30px !important;
+  }
+}

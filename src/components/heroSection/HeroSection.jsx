@@ -14,7 +14,7 @@ export default function HeroSection() {
             </p>
           <button className="primary-button">
             {" "}
-            <Link>Daha ətraflı</Link>
+            <Link to={"projects"}>Daha ətraflı</Link>
           </button>
         </div>
       </div>

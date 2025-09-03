@@ -1,39 +1,42 @@
 @use "../../styles/global.scss" as *;
 
-#appreciation-sec{
-    background-color: $primary-background;
-    color: #fff;
-    padding:  5%;
-    .appreciation-content{
-        padding: 0 !important;
-        .left-side{
-            p{
-                padding-right: 10%;
-                color: $primary-text-color;
-            }
-        }
-        .righ-side{
-            max-width: 100%;
-          
-           
-        }
-        .counters{
-            width: 50%;
-           
-        }
+#appreciation-sec {
+  background-color: $primary-background;
+  color: #fff;
+  padding: 5%;
+  overflow-x: hidden;
+  .appreciation-content {
+    padding: 0 !important;
+    .left-side {
+      p {
+        padding-right: 10%;
+        color: $primary-text-color;
+      }
     }
+    .right-side {
+      max-width: 100%;
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block; // əlavə etsən, daha stabil olar
+      }
+    }
+    .counters {
+      width: 50%;
+    }
+  }
 }
-@media screen and (max-width:768px){
-    .left-side{
-            p{
-                padding-right: 0 !important;
-                font-size: 14px !important;
-            }
-            .counters{
-                width: 100% !important;
-            }
-        }
-        .right-side{
-            padding-top: 50px;
-        }
+@media screen and (max-width: 768px) {
+  .left-side {
+    p {
+      padding-right: 0 !important;
+      font-size: 14px !important;
+    }
+    .counters {
+      width: 100% !important;
+    }
+  }
+  .right-side {
+    padding-top: 50px;
+  }
 }

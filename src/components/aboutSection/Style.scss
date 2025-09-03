@@ -9,7 +9,7 @@
 
   .about-sec {
     background-image: url("../../assets/images/projectImg.png");
-    min-height: 100vh;
+    min-height: 90vh;
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: contain; // yalnız birini saxladım
@@ -41,11 +41,14 @@
         padding-left: 10%;
         letter-spacing: 1px;
         font-size: 18px;
+        color: $primary-text-color;
+        width: 50%;
+       p{
+         margin: 0 !important;
+       }
       }
       .primary-button{
-        position: absolute;
-        bottom: 0;
-        left: 10px;
+        
       }
     }
   }
@@ -57,17 +60,13 @@
   }
   .about-context{
     .right-side{
-      padding-left: 5% !important;
-      p{
-      padding-top: 50px;
-      font-size: 16px;
-    }
+      padding-left: 0% !important;
+      width: 100% !important;
+     
     }
     h2{
       font-size: 30px !important;
     }
-    .primary-button{
-      bottom: -50px !important;
-    }
+    
   }
 }

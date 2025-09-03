@@ -25,7 +25,7 @@ export default function PurposeSection() {
             estetika və müştəri məmnuniyyətini ön planda tuturuq.
           </p>
           <button className="primary-button">
-            <Link> Daha Ətraflı</Link>
+            <Link to={"/about-us"}> Haqqımızda</Link>
           </button>
         </div>
       </div>

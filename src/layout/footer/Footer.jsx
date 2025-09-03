@@ -18,12 +18,14 @@ export default function Footer() {
     <footer>
       <div className="footer-container">
         <div className="footer-top row">
-          <div className="left-side col-12 col-md-6 ">
+          <div className="left-side col-12 col-md-6 d-flex flex-column gap-2 ">
             <div className="logo ">
-              <img src={Logo} alt="" />
+              <Link to={"/"}>
+                <img src={Logo} alt="" />
+              </Link>
             </div>
             <p>Peşəkarlıqla İnşa Edilən Layihələr</p>
-            <div className="footer-icons">
+            <div className="footer-icons pb-5">
               <span>
                 <SlSocialInstagram />
               </span>
@@ -48,25 +50,25 @@ export default function Footer() {
                   <Link to={"/"}>Ana səhifə</Link>
                 </li>
                 <li>
-                  <Link to={"/about"}>Haqqımızda</Link>
+                  <Link to={"/about-us"}>Haqqımızda</Link>
                 </li>
                 <li>
                   <Link to={"/services"}>Xidmətlər</Link>
                 </li>
                 <li>
-                  <Link to={"/about"}>Layihələr</Link>
+                  <Link to={"/projects"}>Layihələr</Link>
                 </li>
                 <li>
-                  <Link to={"/about"}>Tərəfdaşlar</Link>
+                  <Link to={"/partners"}>Tərəfdaşlar</Link>
                 </li>
                 <li>
-                  <Link to={"/about"}>Əlaqə</Link>
+                  <Link to={"/contact-us"}>Əlaqə</Link>
                 </li>
               </ul>
             </div>
             <div className="col ">
               <ul className="d-flex flex-column gap-3">
-                <li className="fw-bold fs-5">Əlaqə</li>
+                <li className="fw-bold fs-5">Əlaqə Vasitələri</li>
                 <li>
                   <span>
                     <IoLocationOutline />
@@ -83,13 +85,27 @@ export default function Footer() {
                   <span>
                     <FaPhoneAlt />
                   </span>
-                  <span>+994502070806</span>
+                  <span>
+                    <Link
+                      to={"https://api.whatsapp.com/send?phone=994502070806"}
+                    >
+                      {" "}
+                      +994502070806
+                    </Link>
+                  </span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <div className="footer-bottom"></div>
+        <div className="footer-bottom d-flex align-items-center justify-content-between flex-wrap">
+          <p>msarchitech.az © Bütün hüquqlar qorunur.</p>
+          <p>
+            <Link to={"https://www.birsayt.az/"}>
+              Sayt hazırlandı: Birsayt.az
+            </Link>
+          </p>
+        </div>
       </div>
     </footer>
   );

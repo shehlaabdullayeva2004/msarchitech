@@ -7,7 +7,7 @@
   padding: 7rem 5%;
   .purpose-sec {
     background-image: url("../../assets/images/purposeBg.png");
-    height: 100vh;
+    height: 90vh;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -32,7 +32,7 @@
       position: absolute;
       bottom: 0;
       left: 10%;
-      transition: to bottom 2s ease-in-out;
+      transition: to top 5s ease-in-out;
     }
     &:hover .purpose-sec-border-left {
       height: 100%;
@@ -54,13 +54,22 @@
   }
 }
 @media (max-width:768px){
+  #purpose-sec{
+    padding: 0 !important;
+  
+    .purpose-sec{
+      height: 80vh !important;
+    }
+  }
     .purpose-sec-content{
+      background-size: contain;
         h1{
             font-size: 30px !important;
         }
         p{
             width: 90% !important;
             font-size: 16px !important;
+             padding-bottom: 10px !important;
         }
     }
 }

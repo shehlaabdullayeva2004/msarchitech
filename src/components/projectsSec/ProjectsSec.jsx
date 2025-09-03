@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import "./Style.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 export default function ProjectsSec() {
   return (
     <section id="project-sec">
@@ -16,7 +17,6 @@ export default function ProjectsSec() {
         <div className="projects ">
           <FaChevronLeft />
           <Swiper
-         
             className="mySwiper"
             breakpoints={{
               640: {
@@ -48,6 +48,9 @@ export default function ProjectsSec() {
           </Swiper>
           <FaChevronRight />
         </div>
+        <button className="primary-button">
+          <Link to="/projects">Daha Ətraflı</Link>
+        </button>
       </div>
     </section>
   );

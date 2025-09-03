@@ -20,23 +20,44 @@
     ul {
       padding: 0;
       font-size: 18px;
+      li {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: flex;
+        gap: 20px;
+       
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -3px; // yazının altında məsafə
+          width: 0;
+          height: 1px;
+          background-color: #fff; // rəng seç
+          transition: width 500ms ease;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
     }
   }
 }
-@media (max-width:768px){
-    .services-content{
-        flex-direction: column-reverse;
-        .right-side{
-            padding-bottom: 10%;
-            ul{
-                gap: 30px !important;
-            }
-            li{
-                font-size: 16px;
-            }
-        }
-        .left-side{
-            background-size:90% !important;
-        }
+@media (max-width: 768px) {
+  .services-content {
+    flex-direction: column-reverse;
+    .right-side {
+      padding-bottom: 10%;
+     
+      li {
+        font-size: 16px;
+        align-items: center;
+      }
     }
+    .left-side {
+      background-size: 90% !important;
+    }
+  }
 }
