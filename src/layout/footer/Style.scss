@@ -1,0 +1,51 @@
+@use "../../styles/global.scss" as *;
+
+footer {
+  background-color: $primary-background;
+  background-color:#181818;
+  color: #fff;
+  height: 100%;
+  padding: 35px 0;
+  .footer-container {
+    background-image: url("../../assets/images/footerBg.png");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5%;
+    min-height: 60vh;
+    .footer-top{
+        .left-side{
+            .logo{
+                width: 140px;
+                height: 110px;
+                margin-bottom: 20px;
+            }
+            .footer-icons{
+                display: flex;
+                gap: 20px;
+               text-align: center;
+               span{
+                 background-color: $primary-color;
+                 width:40px;
+                 height: 40px;
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+                 border-radius: 50%;
+                 color: #191919;
+                 font-size: 20px;
+                 font-weight: 500;
+               }
+            }
+        }
+    }
+    ul{
+        padding-top: 30px;
+        li{
+            font-size: 18px;
+            display: flex; 
+            gap: 10px;
+        }
+    }
+  }
+}

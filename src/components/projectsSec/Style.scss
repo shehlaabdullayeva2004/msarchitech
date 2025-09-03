@@ -1,10 +1,23 @@
 @use "../../styles/global.scss" as *;
 
-#project-sec{
-    background-color:$primary-background;
-    color: #fff;
-    padding: 7rem 5%;
-    .project-sec-container{
-        border: 2px solid #fff;
+#project-sec {
+  background-color: $primary-background;
+  color: #fff;
+  padding: 7rem 5%;
+  .project-sec-container {
+    .projects{
+        display: flex;
+        align-items: center;
+        gap: 30px;
     }
+  }
+  .mySwiper {
+    width: 100%;
+    height: auto;
+    padding: 5% 0;
+    
+  }
+  .swiper-slide{
+    
+  }
 }
