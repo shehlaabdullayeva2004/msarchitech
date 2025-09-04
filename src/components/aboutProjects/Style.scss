@@ -1,0 +1,23 @@
+
+@use "../../styles/global.scss" as *;
+
+#about-projects{
+    background-color: $primary-background;
+     position: relative;
+  z-index: 1;
+  margin-top: 50vh;
+//   padding-bottom: 50px;
+    .projects-content{
+        padding: 7rem 5% ;
+
+    }
+}
+@media (max-width:576px){
+    .projects-content{
+        padding: 7rem 5% ;
+        .primary-button{
+            margin-top: 10px;
+            width: 100%;
+        }
+    }
+}

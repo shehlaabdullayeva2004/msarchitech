@@ -1,0 +1,32 @@
+
+.about-card{
+    color: #ffff;
+    height:auto ;
+    .img{
+        // background-image: url("../../assets/images/aboutCardImg2.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 500px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    .primary-button{
+        min-width: 160px;
+    }
+}
+@media (max-width:576px){
+    .about-card{
+        .img{
+        height: 300px !important;
+        }
+     
+        .primary-button{
+            margin-top: 10px;
+            width: 100%;
+        }
+    
+        
+    }
+}

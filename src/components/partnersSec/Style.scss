@@ -1,0 +1,13 @@
+@use "../../styles/global.scss" as *;
+#partners-sec {
+  background-color: $primary-background;
+  padding: 5rem 5%;
+  margin-top: 50vh;
+  .partners-logos {
+   
+    .partner-card {
+      width: 200px;
+      height: 100px;
+    }
+  }
+}
