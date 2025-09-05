@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Style.scss";
 import Logo from "../../assets/images/logo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -9,25 +9,27 @@ import { IoCloseOutline } from "react-icons/io5";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { pathname } = useLocation();
 
-    const navbarRef = useRef(null);
-
-    useEffect(() => {
-      gsap.to(navbarRef.current, {
-        backgroundColor: "#fff",
-        color: "#000",
-        duration: 1,
-        scrollTrigger: {
-          trigger: navbarRef.current,
-          start: "top top",
-          end: "+=10",
-          scrub: true,
-        },
-      });
-    }, []);
+  const navbarRef = useRef(null);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  useEffect(() => {
+    gsap.to(navbarRef.current, {
+      backgroundColor: "#fff",
+      color: "#000",
+      duration: 1,
+      scrollTrigger: {
+        trigger: navbarRef.current,
+        start: "top top",
+        end: "+=10",
+        scrub: true,
+      },
+    });
+  }, []);
 
   return (
     <nav>
