@@ -2,6 +2,8 @@ import React from "react";
 import "./Style.scss";
 import ProfessionalSecImg from "../../assets/images/professionalImg.png";
 import { Link } from "react-router-dom";
+import { GoDotFill } from "react-icons/go";
+
 
 export default function Professional() {
   return (
@@ -28,14 +30,23 @@ export default function Professional() {
             </p>
             <ul>
               <li>
+                <span className="">
+                  <GoDotFill />
+                </span>
                 Müasir texnologiyalardan istifadə edərək layihələrə innovativ
                 həllər gətiririk.
               </li>
               <li>
+                <span className="">
+                  <GoDotFill />
+                </span>
                 Müxtəlif miqyaslı və təyinatlı layihələri uğurla həyata keçirmək
                 bacarığına malikik.
               </li>
               <li>
+                <span className="">
+                  <GoDotFill />
+                </span>
                 Müştəri ilə daim əlaqədə olaraq hər mərhələdə şəffaflığı və
                 inamı qoruyuruq.
               </li>

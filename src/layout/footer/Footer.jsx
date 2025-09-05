@@ -43,9 +43,9 @@ export default function Footer() {
             </div>
           </div>
           <div className="col-12 col-md-6 row ">
-            <div className="col">
+            <div className="col-12 col-md-6">
               <ul className="d-flex flex-column gap-3">
-                <li className="fw-bold fs-5">Sürətli Keçid</li>
+                <li className="fw-bold">Sürətli Keçid</li>
                 <li>
                   <Link to={"/"}>Ana səhifə</Link>
                 </li>
@@ -66,9 +66,9 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="col ">
+            <div className="col-12 col-md-6 ">
               <ul className="d-flex flex-column gap-3">
-                <li className="fw-bold fs-5">Əlaqə Vasitələri</li>
+                <li className="fw-bold">Əlaqə Vasitələri</li>
                 <li>
                   <span>
                     <IoLocationOutline />

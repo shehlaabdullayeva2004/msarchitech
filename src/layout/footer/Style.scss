@@ -43,6 +43,9 @@ footer {
         ul{
             padding-top: 30px;
             padding: 0;
+            .fw-bold{
+              font-size: 20px;
+            }
             li{
                 font-size: 18px;
                 display: flex; 
@@ -55,6 +58,19 @@ footer {
       padding-top: 25px;
       p{
         font-size: 14px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px){
+  footer{
+    ul{
+      .fw-bold{
+        font-size: 18px !important;
+      }
+      li{
+        font-size: 16px !important;
       }
     }
   }

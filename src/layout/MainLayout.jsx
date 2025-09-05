@@ -6,7 +6,7 @@ import Footer from './footer/Footer';
 export default function MainLayout() {
   return (
     <>
-      <Navbar />
+      <Navbar />  
       <Outlet />
       <Footer />
     </>
