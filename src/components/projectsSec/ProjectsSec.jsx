@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectCard from "../ProjectCard/ProjectCard";
+import ProjectCard from "../projectCard/ProjectCard";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
