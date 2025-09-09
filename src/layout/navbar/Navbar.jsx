@@ -17,19 +17,20 @@ export default function Navbar() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-  useEffect(() => {
-    gsap.to(navbarRef.current, {
-      backgroundColor: "#fff",
-      color: "#000",
-      duration: 1,
-      scrollTrigger: {
-        trigger: navbarRef.current,
-        start: "top top",
-        end: "+=10",
-        scrub: true,
-      },
-    });
-  }, []);
+useEffect(() => {
+  gsap.to(navbarRef.current, {
+    backgroundColor: "#3218050d",
+    backdropFilter: "blur(10px)", 
+    color: "#fff",
+    duration: 1,
+    scrollTrigger: {
+      trigger: navbarRef.current,
+      start: "top top",
+      end: "+=10",
+      scrub: true,
+    },
+  });
+}, []);
 
   return (
     <nav>
@@ -65,7 +66,7 @@ export default function Navbar() {
           className="d-md-none menu-toggle "
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <FaTimes /> : <FaBars />}
+          {isOpen ? <FaTimes  /> : <FaBars />}
         </div>
 
         {/* Mobile menu */}
@@ -74,7 +75,7 @@ export default function Navbar() {
           ref={navbarRef}
         >
           <IoCloseOutline
-            className="fs-1 my-2"
+            className="fs-1 mt-4 mx-4"
             onClick={() => setIsOpen(false)}
           />
 

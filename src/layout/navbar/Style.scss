@@ -50,19 +50,36 @@ nav {
     
     .bar-content {
       position: fixed;
-      top: 0;
-      right: -100%;  
-      width: 90%;
-      height: 100vh;
-      background: #fff;
-      color: #000;
-      transition: right 0.3s ease-in-out;
-    
+  top: 0;
+  right: -100%;
+  width: 90%;
+  min-height: 100vh;
+  color: #fff;
+  transition: right 0.3s ease-in-out;
+  overflow-y: auto; 
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    z-index: -1; // kontentin arxasında qalsın
+  }
+
+
+
+
+
+      
       ul li {
         margin: 20px 0;
     
         a {
-          color: #000;
+          
           font-size: 1.2rem;
           padding-left: 30px;
         }
