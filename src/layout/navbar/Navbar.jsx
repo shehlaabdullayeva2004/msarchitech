@@ -3,7 +3,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link, useLocation } from "react-router-dom";
 import "./Style.scss";
-import Logo from "../../assets/images/logo.png";
+// import Logo from "../../assets/images/logo.png";
+import Logo from "../../assets/images/logo.webp";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IoCloseOutline } from "react-icons/io5";
 
@@ -17,20 +18,20 @@ export default function Navbar() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-useEffect(() => {
-  gsap.to(navbarRef.current, {
-    backgroundColor: "#3218050d",
-    backdropFilter: "blur(10px)", 
-    color: "#fff",
-    duration: 1,
-    scrollTrigger: {
-      trigger: navbarRef.current,
-      start: "top top",
-      end: "+=10",
-      scrub: true,
-    },
-  });
-}, []);
+  useEffect(() => {
+    gsap.to(navbarRef.current, {
+      backgroundColor: "#3218050d",
+      backdropFilter: "blur(10px)",
+      color: "#fff",
+      duration: 1,
+      scrollTrigger: {
+        trigger: navbarRef.current,
+        start: "top top",
+        end: "+=10",
+        scrub: true,
+      },
+    });
+  }, []);
 
   return (
     <nav>
@@ -66,7 +67,7 @@ useEffect(() => {
           className="d-md-none menu-toggle "
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <FaTimes  /> : <FaBars />}
+          {isOpen ? <FaTimes /> : <FaBars />}
         </div>
 
         {/* Mobile menu */}

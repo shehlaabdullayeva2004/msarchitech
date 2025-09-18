@@ -12,6 +12,7 @@ import PartnersPage from './pages/partnersPage/PartnersPage';
 import ContactPage from './pages/contactPage/ContactPage';
 import { useEffect, useState } from 'react';
 import Loader from './components/loader/Loader';
+import NotFoundPage from './pages/notFoundPage/NotFoundPage';
 function App() {
 
   const [loader, setLoader] = useState(true)
@@ -35,6 +36,7 @@ function App() {
           <Route path="/partners" element={<PartnersPage />} />
           <Route path="/contact-us" element={<ContactPage />} />
         </Route>
+          <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   );
