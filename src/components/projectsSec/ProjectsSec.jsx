@@ -1,54 +1,69 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import ProjectCard from "../projectCard/ProjectCard";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "./Style.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import axios from "axios";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "./Style.scss";
+
 export default function ProjectsSec() {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://manager.msarchitectural.az/api/projects")
+      .then((res) => {
+        setProjects(res.data.data || []);
+      })
+      .catch((err) => console.error("Xəta:", err));
+  }, []);
+
   return (
     <section id="project-sec">
       <div className="project-sec-container container-fluid text-center">
-        <div className="head ">
+        <div className="head">
           <h1>Layihələrimiz</h1>
         </div>
-        <div className="projects ">
-          <FaChevronLeft />
+
+        <div className="projects">
+          <FaChevronLeft className="swiper-prev" />
           <Swiper
             className="mySwiper"
+            modules={[Navigation]}
+            navigation={{
+              nextEl: ".swiper-next",
+              prevEl: ".swiper-prev",
+            }}
             breakpoints={{
               640: {
                 slidesPerView: 1,
                 spaceBetween: 20,
               },
               768: {
-                slidesPerView: 1,
-                spaceBetween: 40,
+                slidesPerView: 2,
+                spaceBetween: 30,
               },
               1024: {
                 slidesPerView: 3,
-                spaceBetween: 50,
+                spaceBetween: 40,
               },
             }}
           >
-            <SwiperSlide>
-              <ProjectCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <ProjectCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <ProjectCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <ProjectCard />
-            </SwiperSlide>
+            {projects.map((project) => (
+              <SwiperSlide key={project.id}>
+                <ProjectCard project={project} />
+              </SwiperSlide>
+            ))}
           </Swiper>
-          <FaChevronRight />
+          <FaChevronRight className="swiper-next" />
         </div>
-        <button className="primary-button">
+
+        <button className="primary-button mt-3">
           <Link to="/projects">Daha Ətraflı</Link>
         </button>
       </div>

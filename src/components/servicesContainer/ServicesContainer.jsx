@@ -1,11 +1,11 @@
 import React from "react";
 import ServicesCard from "../servicesCard/ServicesCard";
-import Card1 from "../../assets/images/servicesPageCard1.png";
-import Card2 from "../../assets/images/servicesPageCard2.png";
-import Card3 from "../../assets/images/servicesCardImg3.png";
-import Card4 from "../../assets/images/servicesCardImg4.png";
-import Card5 from "../../assets/images/servicescardImg5.png";
-import Card6 from "../../assets/images/servicesCardImg6.png";
+import Card1 from "../../assets/images/servicesPageCard1.webp";
+import Card2 from "../../assets/images/servicesPageCard2.webp";
+import Card3 from "../../assets/images/servicesCardImg3.webp";
+import Card4 from "../../assets/images/servicesCardImg4.webp";
+import Card5 from "../../assets/images/servicescardImg5.webp";
+import Card6 from "../../assets/images/servicesCardImg6.webp";
 import "./Style.scss";
 
 export default function ServicesContainer() {

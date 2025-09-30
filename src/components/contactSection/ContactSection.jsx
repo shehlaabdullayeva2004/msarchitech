@@ -40,7 +40,16 @@ export default function ContactSection() {
             </li>
           </ul>
         </div>
-        <div className="map col-12 col-md-6">map</div>
+       
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.351475014701!2d49.82812257586579!3d40.3789021714457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307dbd4095cbf1%3A0x94d6fb17c3711ebe!2zMTIxIFNhbGF0xLFuIMaPc2fJmXJvdmEsIEJha8SxIDEwMDk!5e0!3m2!1saz!2saz!4v1759237928757!5m2!1saz!2saz"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="map col-12 col-md-6"
+          />
+        
       </div>
     </section>
   );

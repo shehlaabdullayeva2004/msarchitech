@@ -2,7 +2,7 @@
   width: 100%;
   height: 400px;
   .card-container {
-    background-image: url("../../assets/images/projectCardImg.jpg");
+    background-image: url("../../assets/images/projectCardImg.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,7 +20,7 @@
       }
     }
     &:hover {
-      background-image: url("../../assets/images/projectCardImg2.jpg");
+      background-image: url("../../assets/images/projectCardImg2.webp");
       transition: all 600ms;
     }
     &::after {
@@ -36,8 +36,8 @@
     }
   }
 }
-@media (max-width:576px){
-  .projectCard{
+@media (max-width: 576px) {
+  .projectCard {
     height: 300px !important;
   }
 }

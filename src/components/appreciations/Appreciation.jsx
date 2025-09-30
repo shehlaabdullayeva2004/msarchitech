@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./Style.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import AppreciationImg from "../../assets/images/appreciation2.png";
+import AppreciationImg from "../../assets/images/appreciation.webp";
 import CountUp from "react-countup";
 
 export default function Appreciation() {

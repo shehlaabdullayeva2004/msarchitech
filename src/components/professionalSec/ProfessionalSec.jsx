@@ -1,9 +1,8 @@
 import React from "react";
 import "./Style.scss";
-import ProfessionalSecImg from "../../assets/images/professionalImg.png";
+import ProfessionalSecImg from "../../assets/images/professionalImg.webp";
 import { Link } from "react-router-dom";
 import { GoDotFill } from "react-icons/go";
-
 
 export default function Professional() {
   return (

@@ -6,7 +6,7 @@
   width: 100%;
   padding: 7rem 5%;
   .purpose-sec {
-    background-image: url("../../assets/images/purposeBg.png");
+    background-image: url("../../assets/images/purposeBg.webp");
     height: 90vh;
     background-position: center center;
     background-repeat: no-repeat;
@@ -53,23 +53,23 @@
     }
   }
 }
-@media (max-width:768px){
-  #purpose-sec{
+@media (max-width: 768px) {
+  #purpose-sec {
     padding: 0 !important;
-  
-    .purpose-sec{
+
+    .purpose-sec {
       height: 80vh !important;
     }
   }
-    .purpose-sec-content{
-      background-size: contain;
-        h1{
-            font-size: 30px !important;
-        }
-        p{
-            width: 90% !important;
-            font-size: 16px !important;
-             padding-bottom: 10px !important;
-        }
+  .purpose-sec-content {
+    background-size: contain;
+    h1 {
+      font-size: 30px !important;
     }
+    p {
+      width: 90% !important;
+      font-size: 16px !important;
+      padding-bottom: 10px !important;
+    }
+  }
 }

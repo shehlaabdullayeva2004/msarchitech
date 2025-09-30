@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link, useLocation } from "react-router-dom";
 import "./Style.scss";
-// import Logo from "../../assets/images/logo.png";
+// import Logo from "../../assets/images/logo.webp";
 import Logo from "../../assets/images/logo.webp";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IoCloseOutline } from "react-icons/io5";

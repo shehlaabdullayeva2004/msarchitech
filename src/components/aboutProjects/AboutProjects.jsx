@@ -1,48 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "./Style.scss";
-import AboutHeroSec from '../aboutHeroSection/AboutHeroSec';
-import AboutProjectCard from '../aboutProjectCard/AboutProjectCard';
-import AboutCard from "../../assets/images/aboutCardImg.png";
-import AboutCard2 from "../../assets/images/aboutCardImg2.png";
+import AboutProjectCard from "../aboutProjectCard/AboutProjectCard";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function AboutProjects() {
- const projects = [
-   {
-     id: 1,
-     name: "Layihə 1",
-     img: AboutCard,
-     location: "Bakı Şəhəri, 28 May",
-     residence: "38",
-   },
-   {
-     id: 2,
-     name: "Layihə 2",
-     img: AboutCard2,
-     location: "Bakı Şəhəri, 28 May",
-     residence: "38",
-   },
-   {
-     id: 3,
-     name: "Layihə 3",
-     img: AboutCard2,
-     location: "Bakı Şəhəri, 28 May",
-     residence: "38",
-   },
-   {
-     id: 4,
-     name: "Layihə 4",
-     img: AboutCard,
-     location: "Bakı Şəhəri, 28 May",
-     residence: "38",
-   },
-   {
-     id: 5,
-     name: "Layihə 5",
-     img: AboutCard,
-     location: "Bakı Şəhəri, 28 May",
-     residence: "38",
-   },
- ];
+  const [projects, setProjects] = useState([]);
+  const [modal, setModal] = useState(false);
+  const [activeImages, setActiveImages] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://manager.msarchitectural.az/api/projects")
+      .then((res) => setProjects(res.data.data || []))
+      .catch((err) => console.log(err));
+  }, []);
+
+  const handleOpenModal = (images) => {
+    setActiveImages(images || []);
+    setModal(true);
+  };
+
+  const handleCloseModal = () => setModal(false);
+
   return (
     <>
       <section id="about-projects">
@@ -50,23 +35,71 @@ export default function AboutProjects() {
           <div className="row ">
             {projects.map((project, index) => {
               const patternIndex = index % 3;
-              if (patternIndex === 0 || patternIndex === 1) {
-                return (
-                  <div key={project.id} className="col-12 col-lg-6 mb-4">
-                    <AboutProjectCard project={project} />
-                  </div>
-                );
-              } else if (patternIndex === 2) {
-                return (
-                  <div key={project.id} className="col-12 mb-4">
-                    <AboutProjectCard project={project} />
-                  </div>
-                );
-              }
+              const className =
+                patternIndex === 0 || patternIndex === 1
+                  ? "col-12 col-lg-6 mb-4"
+                  : "col-12 mb-4";
+
+              return (
+                <div key={project.id || index} className={className}>
+                  <AboutProjectCard
+                    project={project}
+                    onShowImages={() => handleOpenModal(project.projectImages)}
+                  />
+                </div>
+              );
             })}
           </div>
         </div>
       </section>
+
+      {/* ======= Modal ======= */}
+      {modal && (
+        <div
+          className="modal fade show "
+          style={{ display: "block", backgroundColor: "rgba(0, 0, 0, 0.62)" }}
+          onClick={handleCloseModal}
+        >
+          <div
+            className="modal-dialog  modal-lg modal-dialog-centered"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="modal-content ">
+              <div className="modal-header m-0 border-0">
+                <button
+                  type="button"
+                  className="btn-close"
+                  onClick={handleCloseModal}
+                ></button>
+              </div>
+              <div className="modal-body">
+                {activeImages.length > 0 ? (
+                  <Swiper
+                    modules={[Navigation, Pagination]}
+                    navigation
+                    pagination={{ clickable: true }}
+                    spaceBetween={20}
+                    slidesPerView={1}
+                    loop
+                  >
+                    {activeImages.map((img, i) => (
+                      <SwiperSlide key={i}>
+                        <img
+                          className="d-block w-100"
+                          src={`https://manager.msarchitectural.az/${img}`}
+                          alt={`slide-${i}`}
+                        />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                ) : (
+                  <p className="text-center">Şəkillər mövcud deyil</p>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

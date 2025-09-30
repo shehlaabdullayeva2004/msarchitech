@@ -1,6 +1,6 @@
-import React from 'react';
-import './Style.scss';
-import SectionImg from "../../assets/images/whoAreWe.png"
+import React from "react";
+import "./Style.scss";
+import SectionImg from "../../assets/images/whoAreWe.webp";
 
 export default function WhoAreWeSec() {
   return (

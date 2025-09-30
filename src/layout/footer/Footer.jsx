@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import "./Style.scss";
-import Logo from "../../assets/images/footerLogo.png";
+import Logo from "../../assets/images/footerLogo.webp";
 import { Link } from "react-router-dom";
 import { SlSocialInstagram } from "react-icons/sl";
 import { CiLinkedin } from "react-icons/ci";
@@ -8,10 +8,6 @@ import { TiSocialFacebook } from "react-icons/ti";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdMailOutline } from "react-icons/md";
 import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
-
-
-
-
 
 export default function Footer() {
   return (
@@ -73,7 +69,7 @@ export default function Footer() {
                   <span>
                     <IoLocationOutline />
                   </span>
-                  <span>---</span>
+                  <span>Salatın Əsgərova 121</span>
                 </li>
                 <li>
                   <span>

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Style.scss";
-import ServicesImg from "../../assets/images/servicesImg.png";
+import ServicesImg from "../../assets/images/servicesImg.webp";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 
