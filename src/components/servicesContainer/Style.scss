@@ -2,7 +2,27 @@
 
 #services-sec{
  background-color: $primary-background;
+//  background-color: #181818;
   color: #fff;
-  padding: 7rem 5%;
+  padding-inline: 5%;
+  padding-block: 7rem;
   margin-top: 50vh;
+  li{
+  line-height: 160%;
+  }
+  p{
+    font-size: 16px;
+    color: $primary-text-color;
+  }
+}
+@media screen and (max-width: 768px) {
+  #services-sec{
+    
+    h5{
+      font-size: 15px !important;
+    }
+   p{
+    font-size: 14px !important;
+   }
+  }
 }

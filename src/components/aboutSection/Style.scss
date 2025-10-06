@@ -3,8 +3,8 @@
 #about-sec {
   background-color: $primary-background;
   padding-inline: 5%;
-  padding-block: 5rem;
   border-top: 1px solid;
+  padding-bottom: 5rem;
   // background: linear-gradient(to bottom, $primary-background, $primary-background);
   background: linear-gradient(to top, $primary-background, #000000e8);
   .about-sec {
@@ -33,10 +33,8 @@
       position: relative;
       z-index: 1;
       color: #fff;
-
       h2 {
         font-size: 40px;
-        line-height: 20px;
       }
       .right-side {
         padding-left: 10%;
@@ -56,7 +54,7 @@
 }
 @media screen and (max-width: 768px) {
   .about-sec {
-    background-size: 160% !important;
+    background-size: 200% !important;
   }
   .about-context {
     .right-side {

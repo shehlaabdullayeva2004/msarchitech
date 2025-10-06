@@ -115,7 +115,7 @@ export default function Navbar() {
               <Link to={createLanguageAwarePath("/about-us")}>Haqqımızda</Link>
             </li>
             <li>
-              <Link to={createLanguageAwarePath("//services")}>Xidmətlər</Link>
+              <Link to={createLanguageAwarePath("/services")}>Xidmətlər</Link>
             </li>
             <li>
               <Link to={createLanguageAwarePath("/projects")}>Layihələr</Link>

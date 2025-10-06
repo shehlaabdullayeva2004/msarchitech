@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <section id="hero-sec">
       <div className="hero-sec">
-        <div className="hero-sec-content  d-flex flex-column justify-content-center align-items-center vh-100 gap-2 " >
+        <div className="hero-sec-content  d-flex flex-column justify-content-center align-items-center vh-100 gap- " >
             <h1 className="hero-head">Gözəlliyi Və Funksionallığı Birləşdiririk</h1>
             <p>
               Hər detalı düşünülmüş layihələrlə xəyallarınızı reallığa çeviririk

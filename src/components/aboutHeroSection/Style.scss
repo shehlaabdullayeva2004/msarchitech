@@ -1,36 +1,6 @@
 @use "../../styles/global.scss" as *;
 
-// #about-hero-sec {
-//   background-color: $primary-background;
-//   width: 100%;
-// height: auto;
-//   .about-hero {
-//     background-image: url("../../assets/images/sectionHead.webp");
-//     min-height: 40vh;
-//     width: 100%;
-//     background-repeat: no-repeat;
-//     background-size: cover  ;
-//     background-position: center center;
-//     color: #ffffff;
-//   background-attachment: fixed;
-//     h1 {
-//       position: absolute;
-//       font-size: 46px;
-//       top: 10%;
-//       left: 50%;
-//       transform: translate(-50%, -50%);
 
-//     }
-//   }
-// }
-// @media (max-width: 576px) {
-//   .about-hero {
-//     height: 40vh !important;
-//   }
-//   h1 {
-//     font-size: 30px !important;
-//   }
-// }
 
 #about-hero-sec {
   background-color: $primary-background;
@@ -40,14 +10,32 @@
   z-index: -2;
   top: 0;
   .about-hero {
-    height: 50vh;
-    background-image: url("../../assets/images/sectionHead.webp");
+    min-height: 50vh;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
+    z-index: 0;
+     &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, #1715155b, #1715157e);
+      pointer-events: none;
+      z-index: 1;
+    }
+    h1{
+      z-index: 2;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
   }
 }

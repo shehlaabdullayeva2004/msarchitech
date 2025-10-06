@@ -1,11 +1,7 @@
 import React from "react";
 import ServicesCard from "../servicesCard/ServicesCard";
-import Card1 from "../../assets/images/servicesPageCard1.webp";
-import Card2 from "../../assets/images/servicesPageCard2.webp";
-import Card3 from "../../assets/images/servicesCardImg3.webp";
-import Card4 from "../../assets/images/servicesCardImg4.webp";
-import Card5 from "../../assets/images/servicescardImg5.webp";
-import Card6 from "../../assets/images/servicesCardImg6.webp";
+import { PiDotOutlineFill } from "react-icons/pi";
+
 import "./Style.scss";
 
 export default function ServicesContainer() {
@@ -14,51 +10,57 @@ export default function ServicesContainer() {
       id: 1,
       head: "Baş plan konseptlərinin hazırlanması",
       title:
-        "Layihənin ümumi inkişaf istiqamətini müəyyənləşdirən funksional və estetik baxışın formalaşdırılması.",
-      img: Card1,
+        "Layihənin müxtəlif mərhələlərində peşəkar məsləhətlərin verilməsi və düzgün həllərin seçilməsinə dəstək göstərilməsi.",
     },
     {
       id: 2,
       head: "Şəhərsalma əsaslandırılmasının işlənilməsi",
       title:
-        "Layihənin ümumi inkişaf istiqamətini müəyyənləşdirən funksional və estetik baxışın formalaşdırılması.",
-      img: Card2,
+     "Tikinti ərazisinin şəhərsalma normalarına uyğunluğunu və ətraf mühitə təsirini nəzərə alaraq əsaslandırılması.",
     },
     {
       id: 3,
       head: "Memarlıq-planlaşdırma və baş plan bölmələri",
       title:
-        "Obyektin memarlıq həlllərinin və tikinti sahəsinin yerləşmə planının hazırlanması.",
-      img: Card3,
+        "Obyektin memarlıq həllərinin və tikinti sahəsinin yerləşmə planının hazırlanması.",
     },
     {
       id: 4,
       head: "Bölmələr üzrə konsultasiya xidmətləri",
       title:
-        "Layihənin müxtəlif mərhələlərində peşəkar məsləhətlərin verilməsi və düzgün həllərin seçilməsinə dəstək göstərilməsi.",
-      img: Card4,
+        "",
     },
     {
       id: 5,
-      head: "Bölmələr üzrə konsultasiya xidmətləri",
+      head: "Tikintiyə müəllif nəzarətinin həyata keçirilməsi",
       title:
-        "Layihənin müxtəlif mərhələlərində peşəkar məsləhətlərin verilməsi və düzgün həllərin seçilməsinə dəstək göstərilməsi.",
-      img: Card5,
+        "Layihənin icrası zamanı memarlıq həllərinin düzgün tətbiq olunmasına və keyfiyyət standartlarına riayət edilməsinə nəzarət olunması.",
     },
     {
       id: 6,
-      head: "Bölmələr üzrə konsultasiya xidmətləri",
+      head: "Tikinti Layihələrinin Hazırlanması",
       title:
-        "Layihənin müxtəlif mərhələlərində peşəkar məsləhətlərin verilməsi və düzgün həllərin seçilməsinə dəstək göstərilməsi.",
-      img: Card6,
+        "Barəsində icazə tələb olunan obyektlərin layihələri şəhərsalma əsaslandırılması, memarlıq-planlaşdırma, baş plan cizgiləri, memarlıq, konstruksiya, mühəndis-kommunikasiya, tikintinin təşkili, ekoloji, texnoloji və smeta bölmələrini əhatə edir.",
+    },
+    {
+      id: 7,
+      head: "Müəllif Nəzarəti",
+      title:
+        "Tikintinin dəmir beton konstruksiya və memarlıq həllərinin layihəyə uyğun icra olunması",
     },
   ];
 
   return (
     <section id="services-sec" className="container-fluid g-0 ">
-      <div className="row g-0 container-fluid ">
-        {services.map((service, index) => (
-          <ServicesCard {...service} isOffset={index % 2 !== 0} />
+      <div className="row g-0 container-fluid p-0 gap-4">
+        {services.map((service) => (
+          <div key={service.id} className="d-flex flex-column">
+            <div className="d-flex gap-1 align-items-center mb-2 justify-content-start ">
+              <PiDotOutlineFill className="" size={20} />
+              <h5 className="mb-0">{service.head}</h5>
+            </div>
+            <p className="mx-1">{service.title}</p>
+          </div>
         ))}
       </div>
     </section>
