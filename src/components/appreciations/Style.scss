@@ -28,12 +28,16 @@
   }
 }
 @media screen and (min-width:1024px){
-  .right-side {
-    max-height: 70vh !important;
+  .appreciation-content {
+    .right-side {
+      max-height: 70vh !important;
+    }
+
   }
 }
 @media screen and (max-width: 768px) {
-  .left-side {
+  .appreciation-content{
+    .left-side {
     padding-bottom: 50px;
     p {
       padding-right: 0 !important;
@@ -47,5 +51,6 @@
     padding-top: 50px;
     max-height: 30vh !important;
     
+  }
   }
 }

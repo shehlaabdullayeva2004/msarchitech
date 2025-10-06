@@ -12,6 +12,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+
     .purpose-sec-border-top {
       width: 0;
       height: 1px;
@@ -25,7 +26,7 @@
     &:hover .purpose-sec-border-top {
       width: 100%;
     }
-    .purpose-sec-border-left {
+    .purpose-sec-border-left{
       width: 1px;
       height: 0;
       background-color: #b4b2b2;
@@ -45,9 +46,9 @@
         padding-bottom: 20px;
       }
       p {
-        width: 50%;
+        width: 45%;
         text-align: center;
-        font-size: 18px;
+        font-size: 16px;
         padding-bottom: 30px;
       }
     }
@@ -68,8 +69,8 @@
     }
     p {
       width: 90% !important;
-      font-size: 16px !important;
-      padding-bottom: 10px !important;
+      font-size: 14px !important;
+      padding-bottom: 10px !important; 
     }
   }
 }

@@ -10,12 +10,12 @@ export default function ServicesSection() {
   }, []);
 
   return (
-    <section id="services" className="container-fluid">
+    <section id="services" className="container-fluid ">
       <div className="row services-content">
-        <div className="left-side col-12 col-md-12 col-lg-5 "></div>
+        <div className="left-side col-12 col-md-12 col-lg-5  "></div>
         <div className="right-side col-12 col-md-12 col-lg-7 d-flex flex-column justify-content-between gap-3 ">
           <h1>Xidmətlər</h1>
-          <ul className="d-flex flex-column gap-3">
+          <ul className="d-flex flex-column">
             <li>
               <span>01</span> <p>Baş plan konseptlərinin hazırlanması</p>
             </li>
