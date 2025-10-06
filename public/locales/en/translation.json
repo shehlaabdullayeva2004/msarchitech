@@ -1,0 +1,66 @@
+{
+  "header": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "services": "Services",
+    "projects": "Projects",
+    "partners": "Partners",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "welcome": "Welcome to MS Architecture",
+      "intro": "We design innovative and sustainable buildings.",
+      "button": "Learn More"
+    },
+    "about": {
+      "title": "About Us",
+      "mission": "Our Mission",
+      "vision": "Our Vision"
+    },
+    "appreciation": {
+      "title": "Client Appreciation",
+      "subtitle": "What our clients say"
+    },
+    "services": {
+      "title": "Our Services",
+      "residential": "Residential Design",
+      "commercial": "Commercial Projects"
+    },
+    "purpose": {
+      "title": "Our Purpose",
+      "description": "Combining beauty and functionality in every project."
+    },
+    "projects": {
+      "title": "Our Projects",
+      "see_more": "See More"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About Us"
+    },
+    "who_are_we": {
+      "title": "Who We Are",
+      "description": "We create sustainable, innovative, and functional architectural projects."
+    },
+    "appreciation": {
+      "title": "Client Appreciation",
+      "subtitle": "Our clients' feedback"
+    },
+    "professional": {
+      "title": "Our Professionals",
+      "description": "Experienced architects delivering top-quality projects."
+    }
+  },
+  "services": {
+    "hero": {
+      "title": "Our Services"
+    },
+    "services_list": {
+      "residential": "Residential Design",
+      "commercial": "Commercial Projects",
+      "interior": "Interior Design"
+    }
+  }
+}

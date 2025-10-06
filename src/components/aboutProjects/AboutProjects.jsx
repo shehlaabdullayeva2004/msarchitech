@@ -20,7 +20,6 @@ export default function AboutProjects() {
       .then((res) => setProjects(res.data.data || []))
       .catch((err) => console.log(err));
   }, []);
-
   const handleOpenModal = (images) => {
     setActiveImages(images || []);
     setModal(true);
@@ -38,7 +37,7 @@ export default function AboutProjects() {
               const className =
                 patternIndex === 0 || patternIndex === 1
                   ? "col-12 col-lg-6 mb-4"
-                  : "col-12 mb-4";
+                  : "col-12 col-lg-6 mb-4";
 
               return (
                 <div key={project.id || index} className={className}>

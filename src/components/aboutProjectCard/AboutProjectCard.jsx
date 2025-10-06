@@ -5,7 +5,7 @@ export default function AboutProjectCard({ project, onShowImages }) {
   return (
     <div className="about-card container-fluid p-0">
       <div className="img">
-        <img 
+        <img
           src={`https://manager.msarchitectural.az/${project.projectTitleImageSrc}`}
           alt={project.location || ""}
         />
