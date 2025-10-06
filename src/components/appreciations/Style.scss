@@ -15,10 +15,11 @@
     }
     .right-side {
       max-width: 100%;
+      min-height: 100%;
+      padding: 0;
       img {
         max-width: 100%;
-        height: auto;
-        display: block; // əlavə etsən, daha stabil olar
+        display: block; 
       }
     }
     .counters {
@@ -26,8 +27,14 @@
     }
   }
 }
+@media screen and (min-width:1024px){
+  .right-side {
+    max-height: 70vh !important;
+  }
+}
 @media screen and (max-width: 768px) {
   .left-side {
+    padding-bottom: 50px;
     p {
       padding-right: 0 !important;
       font-size: 14px !important;
@@ -38,5 +45,7 @@
   }
   .right-side {
     padding-top: 50px;
+    max-height: 30vh !important;
+    
   }
 }
