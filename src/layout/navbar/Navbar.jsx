@@ -84,14 +84,13 @@ export default function Navbar() {
   }, [pathname]);
   useEffect(() => {
     gsap.to(navbarRef.current, {
-      backgroundColor: "#3218050d",
-      backdropFilter: "blur(10px)",
+      backgroundColor: "#d9d3cf0d",
+      backdropFilter: "blur(20px)",
       color: "#fff",
       duration: 1,
       scrollTrigger: {
         trigger: navbarRef.current,
-        start: "top top",
-        end: "+=10",
+         start: "top+=50 top",
         scrub: true,
       },
     });

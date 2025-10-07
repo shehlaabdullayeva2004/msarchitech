@@ -16,7 +16,7 @@ export default function ServicesContainer() {
       id: 2,
       head: "Şəhərsalma əsaslandırılmasının işlənilməsi",
       title:
-     "Tikinti ərazisinin şəhərsalma normalarına uyğunluğunu və ətraf mühitə təsirini nəzərə alaraq əsaslandırılması.",
+        "Tikinti ərazisinin şəhərsalma normalarına uyğunluğunu və ətraf mühitə təsirini nəzərə alaraq əsaslandırılması.",
     },
     {
       id: 3,
@@ -28,7 +28,7 @@ export default function ServicesContainer() {
       id: 4,
       head: "Bölmələr üzrə konsultasiya xidmətləri",
       title:
-        "",
+        "Layihənin müxtəlif mərhələlərində peşəkar məsləhətlərin verilməsi və düzgün həllərin seçilməsinə dəstək göstərilməsi.",
     },
     {
       id: 5,
@@ -56,10 +56,10 @@ export default function ServicesContainer() {
         {services.map((service) => (
           <div key={service.id} className="d-flex flex-column">
             <div className="d-flex gap-1 align-items-center mb-2 justify-content-start ">
-              <PiDotOutlineFill className="" size={20} />
+              <PiDotOutlineFill className="list-element p-0 m-0 " size={25} />
               <h5 className="mb-0">{service.head}</h5>
             </div>
-            <p className="mx-1">{service.title}</p>
+            <p className="mx-2">{service.title}</p>
           </div>
         ))}
       </div>

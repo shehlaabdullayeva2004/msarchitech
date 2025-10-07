@@ -19,10 +19,15 @@
   #services-sec{
     
     h5{
-      font-size: 15px !important;
+      font-size: 16px !important;
+      line-height: 140%;
     }
    p{
     font-size: 14px !important;
+    margin: 0 !important;
+   }
+   .list-element{
+    display: none;
    }
   }
 }
