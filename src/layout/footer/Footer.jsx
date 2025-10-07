@@ -23,18 +23,28 @@ export default function Footer() {
             <p>Peşəkarlıqla İnşa Edilən Layihələr</p>
             <div className="footer-icons pb-5">
               <span>
-                <SlSocialInstagram />
+                <Link
+                  to={
+                    "https://www.instagram.com/msarchitectural.mmc?igsh=MWljd2djM3o0MDBuZg=="
+                  }
+                >
+                  <SlSocialInstagram />
+                </Link>
               </span>
               <span>
-                <CiLinkedin />
+                <Link
+                  to={
+                    "https://www.linkedin.com/in/kamil-qadirov-511521127?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                  }
+                >
+                  <CiLinkedin />
+                </Link>
               </span>
+              
               <span>
-                {" "}
-                <TiSocialFacebook />
-              </span>
-              <span>
-                {" "}
-                <FaWhatsapp />
+                <Link to={"https://api.whatsapp.com/send?phone=994502070806"}>
+                  <FaWhatsapp />
+                </Link>
               </span>
             </div>
           </div>
@@ -85,7 +95,6 @@ export default function Footer() {
                     <Link
                       to={"https://api.whatsapp.com/send?phone=994502070806"}
                     >
-                      {" "}
                       +994502070806
                     </Link>
                   </span>

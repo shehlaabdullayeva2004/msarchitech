@@ -33,12 +33,8 @@ export default function AboutProjects() {
         <div className="projects-content container-fluid ">
           <div className="row ">
             {projects.map((project, index) => {
-              const patternIndex = index % 3;
               const className =
-                patternIndex === 0 || patternIndex === 1
-                  ? "col-12 col-lg-6 mb-4"
-                  : "col-12 col-lg-6 mb-4";
-
+                   "col-12 col-lg-4 mb-3";
               return (
                 <div key={project.id || index} className={className}>
                   <AboutProjectCard
