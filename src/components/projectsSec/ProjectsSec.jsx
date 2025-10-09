@@ -10,9 +10,11 @@ import axios from "axios";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./Style.scss";
+import { useTranslation } from "react-i18next";
 
 export default function ProjectsSec() {
   const [projects, setProjects] = useState([]);
+  const { t } = useTranslation(); 
 
   useEffect(() => {
     axios
@@ -27,7 +29,7 @@ export default function ProjectsSec() {
     <section id="project-sec">
       <div className="project-sec-container container-fluid text-center">
         <div className="head">
-          <h1>Layihələrimiz</h1>
+          <h1>{t("home.projectsSec.title")}</h1>
         </div>
 
         <div className="projects">
@@ -64,7 +66,7 @@ export default function ProjectsSec() {
         </div>
 
         <button className="primary-button mt-3">
-          <Link to="/projects">Daha Ətraflı</Link>
+          <Link to="/projects">{t("common.readMore")}</Link>
         </button>
       </div>
     </section>

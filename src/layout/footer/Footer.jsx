@@ -8,8 +8,10 @@ import { TiSocialFacebook } from "react-icons/ti";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdMailOutline } from "react-icons/md";
 import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const {t} =useTranslation();
   return (
     <footer>
       <div className="footer-container">
@@ -20,7 +22,7 @@ export default function Footer() {
                 <img src={Logo} alt="" />
               </Link>
             </div>
-            <p>Peşəkarlıqla İnşa Edilən Layihələr</p>
+            <p>{t("footer.slogan")}</p>
             <div className="footer-icons pb-5">
               <span>
                 <Link
@@ -40,7 +42,7 @@ export default function Footer() {
                   <CiLinkedin />
                 </Link>
               </span>
-              
+
               <span>
                 <Link to={"https://api.whatsapp.com/send?phone=994502070806"}>
                   <FaWhatsapp />
@@ -51,35 +53,35 @@ export default function Footer() {
           <div className="col-12 col-md-6 row ">
             <div className="col-12 col-md-6">
               <ul className="d-flex flex-column gap-3">
-                <li className="fw-bold">Sürətli Keçid</li>
+                <li className="fw-bold">{t("footer.quickLinks")}</li>
                 <li>
-                  <Link to={"/"}>Ana səhifə</Link>
+                  <Link to={"/"}>{t("footer.home")}</Link>
                 </li>
                 <li>
-                  <Link to={"/about-us"}>Haqqımızda</Link>
+                  <Link to={"/about-us"}>{t("footer.about")}</Link>
                 </li>
                 <li>
-                  <Link to={"/services"}>Xidmətlər</Link>
+                  <Link to={"/services"}>{t("footer.services")}</Link>
                 </li>
                 <li>
-                  <Link to={"/projects"}>Layihələr</Link>
+                  <Link to={"/projects"}>{t("footer.projects")}</Link>
                 </li>
                 <li>
-                  <Link to={"/partners"}>Tərəfdaşlar</Link>
+                  <Link to={"/partners"}>{t("footer.partners")}</Link>
                 </li>
                 <li>
-                  <Link to={"/contact-us"}>Əlaqə</Link>
+                  <Link to={"/contact-us"}>{t("footer.contact")}</Link>
                 </li>
               </ul>
             </div>
             <div className="col-12 col-md-6 ">
               <ul className="d-flex flex-column gap-3">
-                <li className="fw-bold">Əlaqə Vasitələri</li>
+                <li className="fw-bold">{t("footer.contactInfo")}</li>
                 <li>
                   <span>
                     <IoLocationOutline />
                   </span>
-                  <span>Salatın Əsgərova 121</span>
+                  <span>{t("footer.address")}</span>
                 </li>
                 <li>
                   <span>
@@ -104,10 +106,10 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom d-flex align-items-center justify-content-between flex-wrap">
-          <p>msarchitech.az © Bütün hüquqlar qorunur.</p>
+          <p>msarchitech.az © {t("footer.contactInfo")}</p>
           <p>
             <Link to={"https://www.birsayt.az/"}>
-              Sayt hazırlandı: Birsayt.az
+              {t("footer.developedBy")} Birsayt.az
             </Link>
           </p>
         </div>

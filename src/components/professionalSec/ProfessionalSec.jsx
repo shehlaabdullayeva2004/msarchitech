@@ -3,8 +3,11 @@ import "./Style.scss";
 import ProfessionalSecImg from "../../assets/images/professionalImg.webp";
 import { Link } from "react-router-dom";
 import { GoDotFill } from "react-icons/go";
+import { useTranslation } from "react-i18next";
 
 export default function Professional() {
+  const { t } = useTranslation();
+
   return (
     <section id="professional">
       <div className="professional container-fluid row">
@@ -13,45 +16,36 @@ export default function Professional() {
         </div>
         <div className="right-side col-12 col-lg-7 ">
           <div className="top">
-            <h1>Peşəkarlığımız</h1>
-            <p>
-              MS ARCHITECTURAL olaraq layihələrimizi beynəlxalq standartlara
-              cavab verən dəqiqlik və məsuliyyətlə həyata keçiririk.
-            </p>
+            <h1>{t("about.professionsSection.title")}</h1>
+            <p>{t("about.professionsSection.subtitle")}</p>
           </div>
           <div className="bottom">
-            <p>
-              Təcrübəli mütəxəssislərimiz hər detalda keyfiyyəti və
-              funksionallığı təmin edir. Bizim üçün hər bir layihə yalnız inşaat
-              deyil, həm də uzunmüddətli dəyər yaratmaq deməkdir. Buna görə də
-              estetik görünüşlə yanaşı, davamlılıq və innovativ həllərə xüsusi
-              diqqət ayırırıq.
-            </p>
+            <p>{t("about.professionsSection.paragraphHead")}</p>
             <ul>
               <li>
                 <span className="">
                   <GoDotFill />
                 </span>
-                Müasir texnologiyalardan istifadə edərək layihələrə innovativ
-                həllər gətiririk.
+                {t("about.professionsSection.paragraph1")}
               </li>
               <li>
                 <span className="">
                   <GoDotFill />
                 </span>
-                Müxtəlif miqyaslı və təyinatlı layihələri uğurla həyata keçirmək
-                bacarığına malikik.
+                {t("about.professionsSection.paragraph2")}
               </li>
               <li>
                 <span className="">
                   <GoDotFill />
                 </span>
-                Müştəri ilə daim əlaqədə olaraq hər mərhələdə şəffaflığı və
-                inamı qoruyuruq.
+                {t("about.professionsSection.paragraph3")}
               </li>
             </ul>
             <button className="primary-button">
-              <Link to={"/projects"}>Daha Ətraflı</Link>
+              <Link to={"/projects"}>
+                {" "}
+                {t("common.readMore")}
+              </Link>
             </button>
           </div>
         </div>

@@ -4,8 +4,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import AppreciationImg from "../../assets/images/appreciation.png";
 import CountUp from "react-countup";
+import { useTranslation } from "react-i18next";
 
 export default function Appreciation() {
+  const { t } = useTranslation();
   useEffect(() => {
     AOS.init({ duration: 800, once: false });
   }, []);
@@ -17,30 +19,20 @@ export default function Appreciation() {
           className="left-side col col-12 col-md-12 col-lg-6 d-flex flex-column gap-4 "
           data-aos="fade-right"
         >
-          <h1>Dəyərlərimiz</h1>
-          <p className="">
-            Bizim üçün hər bir layihə sadəcə bir tikili deyil, həm də dəyərlərin
-            ifadəsidir. İrəliləyən dünyanın tələblərinə cavab verən innovativ
-            yanaşmalar, gələcək nəsilləri düşünən davamlı inkişaf prinsipi, hər
-            layihədə fərqliliyi qoruyan unikallıq, həm funksionallıq, həm də
-            estetikanı birləşdirən dizayn baxışı və ən əsası müştəri
-            məmnuniyyətinə sadiqlik MS ARCHITECTURAL-ın iş fəlsəfəsinin əsasını
-            təşkil edir. Təcrübəli komandamızla biz layihələrimizi beynəlxalq
-            standartlara uyğun, peşəkarlıqla həyata keçirməyi ən mühüm məqsəd
-            sayırıq.
-          </p>
+          <h1>{t("home.appreciationSection.title")}</h1>
+          <p className="">{t("home.appreciationSection.subtitle")}</p>
           <div className="counters d-flex gap-5">
             <div className="counter col border-end">
               <h1>
                 <CountUp end={9} duration={5} />
               </h1>
-              <p>İllik təcrübə</p>
+              <p>{t("home.appreciationSection.experience")}</p>
             </div>
             <div className="counter col">
               <h1>
                 <CountUp end={100} duration={4} /> <span>+</span>
               </h1>
-              <p>Layihə </p>
+              <p>{t("home.appreciationSection.projects")}</p>
             </div>
           </div>
         </div>

@@ -3,8 +3,11 @@ import "./Style.scss";
 import AOS from "aos";
 import "aos/dist/aos.css"; 
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
-export default function PurposeSection() {
+export default function PurposeSection(){
+  const { t } = useTranslation();
+  
   useEffect(() => {
     AOS.init({
       duration: 800, 
@@ -18,14 +21,10 @@ export default function PurposeSection() {
         <div className="purpose-sec-border-top " data-aos="ease-in-out"></div>
         <div className="purpose-sec-border-left " data-aos="ease-in-out"></div>
         <div className="purpose-sec-content d-flex flex-column justify-content-center align-items-center w-100 vh-100 ">
-          <h1>Məqsədimiz</h1>
-          <p>
-            Məqsədimiz şəhərsalma, memarlıq və mühəndislik sahəsində innovativ
-            və funksional həllər təqdim etməkdir. Biz hər layihədə keyfiyyət,
-            estetika və müştəri məmnuniyyətini ön planda tuturuq.
-          </p>
+          <h1>{t("home.purposeSection.title")}</h1>
+          <p>{t("home.purposeSection.subtitle")}</p>
           <button className="primary-button">
-            <Link to={"/about-us"}> Haqqımızda</Link>
+            <Link to={"/about-us"}> {t("common.readMore")}</Link>
           </button>
         </div>
       </div>

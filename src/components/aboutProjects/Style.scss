@@ -6,13 +6,23 @@
      position: relative;
   z-index: 1;
   margin-top: 50vh;
-//   padding-bottom: 50px;
     .projects-content{
         padding: 7rem 5% ;
 
     }
     
 }
+.swiper-button-next,
+.swiper-button-prev {
+  font-size: 10px !important; 
+  color: #fff !important;
+  width: 30px !important;
+  height: 30px !important;
+}
+.swiper-pagination-bullet-active {
+  background: #fff !important; 
+}
+
 .modal-content {
   background: #3a37376c; 
   backdrop-filter: blur(12px);          
@@ -20,8 +30,8 @@
   border-radius: 12px; 
 }
 .modal-body img {
-  max-height: 80vh; // ekranın 80%-i qədər hündürlüyə qədər böyüsün
-  margin: 0 auto;   // ortalanma
+  max-height: 80vh; 
+  margin: 0 auto;  
   display: block;
   object-fit: contain; 
   

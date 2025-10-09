@@ -7,6 +7,90 @@
     "partners": "Tərəfdaşlar",
     "contact": "Əlaqə"
   },
-  "welcome": "Saytımıza xoş gəlmisiniz",
-  "contact": "Əlaqə"
+  "home": {
+    "heroSection": {
+      "title": "Gözəlliyi Və Funksionallığı Birləşdiririk",
+      "subtitle": "Hər detalı düşünülmüş layihələrlə xəyallarınızı reallığa çeviririk və sizə həm estetik, həm də funksional məkanlar təqdim edirik."
+    },
+    "aboutSection": {
+      "title": "Haqqımızda",
+      "subtitle": "MS ARCHITECTURAL MMC İN/L-2177/2016 lisenziya nömrəsi ilə 2016-cı ildə təsis edilmişdir. Şirkət Azərbaycanın müxtəlif şəhər və bölgələrində müasir standartlara cavab verən müxtəlif təyinatlı layihələr həyata keçirmiş və memarlıq sahəsində öz mövqeyini təsdiqləmişdir."
+    },
+    "appreciationSection": {
+      "title": "Dəyərlərimiz",
+      "subtitle": "Bizim üçün hər bir layihə sadəcə bir tikili deyil, həm də dəyərlərin ifadəsidir. İrəliləyən dünyanın tələblərinə cavab verən innovativ yanaşmalar, gələcək nəsilləri düşünən davamlı inkişaf prinsipi, hər layihədə fərqliliyi qoruyan unikallıq, həm funksionallıq, həm də estetikanı birləşdirən dizayn baxışı və ən əsası müştəri məmnuniyyətinə sadiqlik MS ARCHITECTURAL-ın iş fəlsəfəsinin əsasını təşkil edir. Təcrübəli komandamızla biz layihələrimizi beynəlxalq standartlara uyğun, peşəkarlıqla həyata keçirməyi ən mühüm məqsəd sayırıq.",
+      "experience": "İllik təcrübə",
+      "projects": "layihə"
+    },
+    "servicesSection": {
+      "title": "Xidmətlər",
+      "service1": "Baş plan konseptlərinin hazırlanması",
+      "service1subtitle": "Layihənin müxtəlif mərhələlərində peşəkar məsləhətlərin verilməsi və düzgün həllərin seçilməsinə dəstək göstərilməsi.",
+      "service2": "Şəhərsalma əsaslandırılmasının işlənilməsi",
+      "service2subtitle":"Layihənin icrası zamanı memarlıq həllərinin düzgün tətbiq olunmasına və keyfiyyət standartlarına riayət edilməsinə nəzarət olunması.",
+      "service3": "Barəsində məlumatlandırma icraatı tətbiq olunan tikinti obyektlərinin memarlıq-planlaşdırma və tikinti ərazisinin baş planı bölmələri",
+      "service3subtitle":"Obyektin memarlıq həllərinin və tikinti sahəsinin yerləşmə planının hazırlanması.",
+      "service4": "Barəsində icazə tələb olunan obyektlərin tikinti layihələrinin bölmələrinin hazırlanması",
+      "service4subtitle":"Barəsində icazə tələb olunan obyektlərin layihələri şəhərsalma əsaslandırılması, memarlıq-planlaşdırma, baş plan cizgiləri, memarlıq, konstruksiya, mühəndis-kommunikasiya, tikintinin təşkili, ekoloji, texnoloji və smeta bölmələrini əhatə edir.",
+      "service5": "Bölmələr üzrə konsultasiya xidmətləri",
+      "service5subtitle":"Barəsində icazə tələb olunan obyektlərin layihələri şəhərsalma əsaslandırılması, memarlıq-planlaşdırma, baş plan cizgiləri, memarlıq, konstruksiya, mühəndis-kommunikasiya, tikintinin təşkili, ekoloji, texnoloji və smeta bölmələrini əhatə edir.",
+      "service6": "Tikintiyə müəllif nəzarətinin həyata keçirilməsi",
+      "service6subtitle":"Tikintinin dəmir beton konstruksiya və memarlıq həllərinin layihəyə uyğun icra olunması"
+    },
+    "purposeSection": {
+      "title": "Məqsədimiz",
+      "subtitle": "Məqsədimiz şəhərsalma, memarlıq və mühəndislik sahəsində innovativ və funksional həllər təqdim etməkdir. Biz hər layihədə keyfiyyət, estetika və müştəri məmnuniyyətini ön planda tuturuq."
+    },
+    "projectsSec": {
+      "title": "Layihələrimiz"
+    }
+  },
+  "about": {
+    "heroTitle": "Haqqımızda",
+    "whoAreWe": "Biz kimik?",
+    "whoAreWeText": "MS ARCHITECTURAL MMC İNL-2177/2016 lisenziya nömrəsi ilə 2016-cı ildə təsis edilmişdir. Şirkət Azərbaycanın müxtəlif şəhər və bölgələrində müasir standartlara cavab verən müxtəlif təyinatlı layihələr həyata keçirmiş və memarlıq sahəsində öz mövqeyini təsdiqləmişdir. Fəaliyyətə başladığı gündən etibarən məqsədimiz şəhərsalma, memarlıq və mühəndislik sahəsində yenilikçi yanaşmalar təqdim edərək ölkəmizin inkişafına töhfə vermək olmuşdur. Bugün isə MS ARCHITECTURAL keyfiyyətli işləri peşəkar komandası və beynəlxalq standartlara uyğun layihələri ilə etibarlı tərəfdaş kimi tanınır.",
+    "professionsSection": {
+      "title": "Peşəkarlığımız",
+      "subtitle": "MS ARCHITECTURAL olaraq layihələrimizi beynəlxalq standartlara cavab verən dəqiqlik və məsuliyyətlə həyata keçiririk.",
+      "paragraphHead": "Təcrübəli mütəxəssislərimiz hər detalda keyfiyyəti və funksionallığı təmin edir. Bizim üçün hər bir layihə yalnız inşaat deyil, həm də uzunmüddətli dəyər yaratmaq deməkdir. Buna görə də estetik görünüşlə yanaşı, davamlılıq və innovativ həllərə xüsusi diqqət ayırırıq.",
+      "paragraph1": "Müasir texnologiyalardan istifadə edərək layihələrə innovativ həllər gətiririk.",
+      "paragraph2": "Müxtəlif miqyaslı və təyinatlı layihələri uğurla həyata keçirmək bacarığına malikik.",
+      "paragraph3": "Müştəri ilə daim əlaqədə olaraq hər mərhələdə şəffaflığı və inamı qoruyuruq."
+    }
+  },
+  "partners": {
+    "heroTitle": "Tərəfdaşlar"
+  },
+  "projects": {
+    "heroTitle": "Layihələr"
+  },
+  "services":{
+    "heroTitle":"Xidmətlər"
+  },
+  "contact": {
+    "heroTitle": "Əlaqə",
+    "title": "Əlaqə Vasitələri",
+    "emailTitle": "E-mail ünvanı",
+    "phoneTitle": "Telefon",
+    "addressTitle": "Ünvan",
+    "address": "Salatın Əsgərova 121, Bakı, Azərbaycan"
+  },
+
+  "common": {
+    "readMore": "Daha Ətraflı"
+  },
+  "footer": {
+    "slogan": "Peşəkarlıqla İnşa Edilən Layihələr",
+    "quickLinks": "Sürətli Keçid",
+    "home": "Ana səhifə",
+    "about": "Haqqımızda",
+    "services": "Xidmətlər",
+    "projects": "Layihələr",
+    "partners": "Tərəfdaşlar",
+    "contact": "Əlaqə",
+    "contactInfo": "Əlaqə Vasitələri",
+    "address": "Salatın Əsgərova 121",
+    "rights": "© Bütün hüquqlar qorunur.",
+    "developedBy": "Sayt hazırlandı: Birsayt.az"
+  }
 }

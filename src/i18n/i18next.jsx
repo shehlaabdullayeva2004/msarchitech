@@ -8,12 +8,12 @@ const langs = ["az", "en", "ru"];
 i18n
   .use(detector)
   .use(backend)
-  .use(initReactI18next) // passes i18n down to react-i18next
+  .use(initReactI18next) 
   .init({
     lng: "az",
     fallbackLng: "az",
     supportedLngs: langs,
-    debug: true, // Enable debug mode
+    debug: true, // Enable debug mode 
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },

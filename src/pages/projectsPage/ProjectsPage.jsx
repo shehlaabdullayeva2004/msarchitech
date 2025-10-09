@@ -8,7 +8,7 @@ import BgImage from "../../assets/images/projectsHeroBg.webp";
 export default function ProjectsPage() {
   return (
     <>
-      <AboutHeroSec title={"Layihələr"} bgImage={BgImage} />
+      <AboutHeroSec title={"projects.heroTitle"} bgImage={BgImage} />
       <AboutProjects />
     </>
   );

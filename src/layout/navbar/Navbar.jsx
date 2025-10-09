@@ -90,7 +90,7 @@ export default function Navbar() {
       duration: 1,
       scrollTrigger: {
         trigger: navbarRef.current,
-         start: "top+=50 top",
+        start: "top+=50 top",
         scrub: true,
       },
     });
@@ -111,19 +111,33 @@ export default function Navbar() {
               <Link to={createLanguageAwarePath("/")}>{t("header.home")}</Link>
             </li>
             <li>
-              <Link to={createLanguageAwarePath("/about-us")}>Haqqımızda</Link>
+              <Link to={createLanguageAwarePath("/about-us")}>
+                {t("header.aboutUs")}
+              </Link>
             </li>
             <li>
-              <Link to={createLanguageAwarePath("/services")}>Xidmətlər</Link>
+              <Link to={createLanguageAwarePath("/services")}>
+                {" "}
+                {t("header.services")}
+              </Link>
             </li>
             <li>
-              <Link to={createLanguageAwarePath("/projects")}>Layihələr</Link>
+              <Link to={createLanguageAwarePath("/projects")}>
+                {" "}
+                {t("header.projects")}
+              </Link>
             </li>
             <li>
-              <Link to={createLanguageAwarePath("/partners")}>Tərəfdaşlar</Link>
+              <Link to={createLanguageAwarePath("/partners")}>
+                {" "}
+                {t("header.partners")}
+              </Link>
             </li>
             <li>
-              <Link to={createLanguageAwarePath("/contact-us")}>Əlaqə</Link>
+              <Link to={createLanguageAwarePath("/contact-us")}>
+                {" "}
+                {t("header.contact")}
+              </Link>
             </li>
           </ul>
         </div>
@@ -147,7 +161,7 @@ export default function Navbar() {
             ></i>
           </div>
           {isLanguageOpen && (
-            <ul className="dropdown-menu show position-absolute">
+            <ul className="dropdown-menu show position-absolute text-light">
               <li onClick={() => handleLanguageSelect("az")}>
                 <span className="dropdown-item">Az</span>
               </li>

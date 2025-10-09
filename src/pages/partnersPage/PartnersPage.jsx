@@ -5,7 +5,7 @@ import PartnersSection from '../../components/partnersSec/PartnersSection';
 export default function PartnersPage() {
   return (
     <>
-      <AboutHeroSec title={"Tərəfdaşlar"} /> 
+      <AboutHeroSec title={"partners.heroTitle"} /> 
       <PartnersSection/>
     </>
   );

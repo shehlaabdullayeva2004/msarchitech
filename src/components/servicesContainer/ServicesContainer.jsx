@@ -3,63 +3,52 @@ import ServicesCard from "../servicesCard/ServicesCard";
 import { PiDotOutlineFill } from "react-icons/pi";
 
 import "./Style.scss";
+import { useTranslation } from "react-i18next";
 
 export default function ServicesContainer() {
-  const services = [
+  const { t } = useTranslation();
+  const servicesList = [
     {
       id: 1,
-      head: "Baş plan konseptlərinin hazırlanması",
-      title:
-        "Layihənin müxtəlif mərhələlərində peşəkar məsləhətlərin verilməsi və düzgün həllərin seçilməsinə dəstək göstərilməsi.",
+      title: t("home.servicesSection.service1"),
+      subtitle: t("home.servicesSection.service1subtitle"),
     },
     {
       id: 2,
-      head: "Şəhərsalma əsaslandırılmasının işlənilməsi",
-      title:
-        "Tikinti ərazisinin şəhərsalma normalarına uyğunluğunu və ətraf mühitə təsirini nəzərə alaraq əsaslandırılması.",
+      title: t("home.servicesSection.service2"),
+      subtitle: t("home.servicesSection.service2subtitle"),
     },
     {
       id: 3,
-      head: "Memarlıq-planlaşdırma və baş plan bölmələri",
-      title:
-        "Obyektin memarlıq həllərinin və tikinti sahəsinin yerləşmə planının hazırlanması.",
+      title: t("home.servicesSection.service3"),
+      subtitle: t("home.servicesSection.service3subtitle"),
     },
     {
       id: 4,
-      head: "Bölmələr üzrə konsultasiya xidmətləri",
-      title:
-        "Layihənin müxtəlif mərhələlərində peşəkar məsləhətlərin verilməsi və düzgün həllərin seçilməsinə dəstək göstərilməsi.",
+      title: t("home.servicesSection.service4"),
+      subtitle: t("home.servicesSection.service4subtitle"),
     },
     {
       id: 5,
-      head: "Tikintiyə müəllif nəzarətinin həyata keçirilməsi",
-      title:
-        "Layihənin icrası zamanı memarlıq həllərinin düzgün tətbiq olunmasına və keyfiyyət standartlarına riayət edilməsinə nəzarət olunması.",
+      title: t("home.servicesSection.service5"),
+      subtitle: t("home.servicesSection.service5subtitle"),
     },
     {
       id: 6,
-      head: "Tikinti Layihələrinin Hazırlanması",
-      title:
-        "Barəsində icazə tələb olunan obyektlərin layihələri şəhərsalma əsaslandırılması, memarlıq-planlaşdırma, baş plan cizgiləri, memarlıq, konstruksiya, mühəndis-kommunikasiya, tikintinin təşkili, ekoloji, texnoloji və smeta bölmələrini əhatə edir.",
-    },
-    {
-      id: 7,
-      head: "Müəllif Nəzarəti",
-      title:
-        "Tikintinin dəmir beton konstruksiya və memarlıq həllərinin layihəyə uyğun icra olunması",
+      title: t("home.servicesSection.service6"),
+      subtitle: t("home.servicesSection.service6subtitle"),
     },
   ];
-
   return (
     <section id="services-sec" className="container-fluid g-0 ">
       <div className="row g-0 container-fluid p-0 gap-4">
-        {services.map((service) => (
+        {servicesList.map((service) => (
           <div key={service.id} className="d-flex flex-column">
             <div className="d-flex gap-1 align-items-center mb-2 justify-content-start ">
               <PiDotOutlineFill className="list-element p-0 m-0 " size={25} />
-              <h5 className="mb-0">{service.head}</h5>
+              <h5 className="mb-0">{service.title}</h5>
             </div>
-            <p className="mx-2">{service.title}</p>
+            <p className="mx-2">{service.subtitle}</p>
           </div>
         ))}
       </div>

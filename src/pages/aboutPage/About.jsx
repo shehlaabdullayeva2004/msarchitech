@@ -7,10 +7,10 @@ import Professional from '../../components/professionalSec/ProfessionalSec';
 export default function AboutPage() {
   return (
     <>
-      <AboutHeroSec title={"Haqqımızda"} />
+      <AboutHeroSec title={"about.heroTitle"} />
       <WhoAreWeSec />
       <Appreciation />
-      <Professional/>
+      <Professional />
     </>
   );
 }

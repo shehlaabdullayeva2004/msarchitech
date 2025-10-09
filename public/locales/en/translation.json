@@ -8,59 +8,88 @@
     "contact": "Contact"
   },
   "home": {
-    "hero": {
-      "welcome": "Welcome to MS Architecture",
-      "intro": "We design innovative and sustainable buildings.",
-      "button": "Learn More"
+    "heroSection": {
+      "title": "Combining Beauty and Functionality",
+      "subtitle": "Turning your dreams into reality with carefully designed projects that are both aesthetic and functional."
     },
-    "about": {
+    "aboutSection": {
       "title": "About Us",
-      "mission": "Our Mission",
-      "vision": "Our Vision"
+      "subtitle": "MS ARCHITECTURAL LLC was established in 2016 with license number IN/L-2177/2016. The company has completed various projects of different purposes in multiple cities and regions of Azerbaijan, meeting modern standards, and has established its position in the field of architecture."
     },
-    "appreciation": {
-      "title": "Client Appreciation",
-      "subtitle": "What our clients say"
+    "appreciationSection": {
+      "title": "Our Values",
+      "subtitle": "For us, every project is not just a building but also an expression of values. Innovative approaches that meet the demands of a progressing world, the principle of sustainable development with future generations in mind, uniqueness preserving distinctiveness in every project, design perspective combining both functionality and aesthetics, and most importantly, dedication to client satisfaction form the core philosophy of MS ARCHITECTURAL. With our experienced team, we aim to execute our projects professionally, according to international standards.",
+      "experience": "Years of Experience",
+      "projects": "Project"
     },
-    "services": {
-      "title": "Our Services",
-      "residential": "Residential Design",
-      "commercial": "Commercial Projects"
-    },
-    "purpose": {
+   "servicesSection": {
+  "title": "Services",
+  "service1": "Development of master plan concepts",
+  "service1subtitle": "Providing professional consultations at various stages of the project and assisting in selecting the right solutions.",
+  "service2": "Urban planning justification development",
+  "service2subtitle": "Supervising the proper implementation of architectural solutions and adherence to quality standards during project execution.",
+  "service3": "Architectural and planning sections of construction sites subject to notification procedure",
+  "service3subtitle": "Preparation of the architectural design and layout plan of the construction site.",
+  "service4": "Preparation of construction project sections requiring a permit",
+  "service4subtitle": "Projects requiring permits include urban planning justification, architectural planning, master plan drawings, architecture, construction, engineering communications, construction organization, ecological, technological, and cost estimate sections.",
+  "service5": "Consulting services by sections",
+  "service5subtitle": "Projects requiring permits cover urban planning justification, architectural planning, master plan drawings, architecture, construction, engineering communications, construction organization, ecological, technological, and cost estimate sections.",
+  "service6": "Author supervision of construction",
+  "service6subtitle": "Ensuring the implementation of reinforced concrete structures and architectural solutions in accordance with the project."
+},
+    "purposeSection": {
       "title": "Our Purpose",
-      "description": "Combining beauty and functionality in every project."
+      "subtitle": "Our purpose is to provide innovative and functional solutions in urban planning, architecture, and engineering. We prioritize quality, aesthetics, and client satisfaction in every project."
     },
-    "projects": {
-      "title": "Our Projects",
-      "see_more": "See More"
+    "projectsSec": {
+      "title": "Our Projects"
     }
   },
   "about": {
-    "hero": {
-      "title": "About Us"
-    },
-    "who_are_we": {
-      "title": "Who We Are",
-      "description": "We create sustainable, innovative, and functional architectural projects."
-    },
-    "appreciation": {
-      "title": "Client Appreciation",
-      "subtitle": "Our clients' feedback"
-    },
-    "professional": {
-      "title": "Our Professionals",
-      "description": "Experienced architects delivering top-quality projects."
-    }
+  "heroTitle": "About Us",
+  "whoAreWe": "Who are we?",
+  "whoAreWeText": "MS ARCHITECTURAL LLC was established in 2016 with license number INL-2177/2016. The company has successfully implemented various projects of different purposes in several cities and regions of Azerbaijan, meeting modern standards and confirming its strong position in the field of architecture. Since its foundation, our goal has been to contribute to the development of our country by introducing innovative approaches in urban planning, architecture, and engineering. Today, MS ARCHITECTURAL is recognized as a reliable partner for its professional team and high-quality projects that meet international standards.",
+  "professionsSection": {
+    "title": "Our Professionalism",
+    "subtitle": "At MS ARCHITECTURAL, we implement our projects with precision and responsibility that meet international standards.",
+    "paragraphHead": "Our experienced specialists ensure quality and functionality in every detail. For us, every project is not just construction, but also the creation of long-term value. Therefore, we pay special attention to aesthetics, sustainability, and innovative solutions.",
+    "paragraph1": "We bring innovative solutions to projects using modern technologies.",
+    "paragraph2": "We have the ability to successfully implement projects of various scales and purposes.",
+    "paragraph3": "We maintain transparency and trust by staying in close contact with clients at every stage."
+  }
+},
+ "partners":{
+    "heroTitle":"Partners"
   },
-  "services": {
-    "hero": {
-      "title": "Our Services"
-    },
-    "services_list": {
-      "residential": "Residential Design",
-      "commercial": "Commercial Projects",
-      "interior": "Interior Design"
-    }
+  "projects": {
+    "heroTitle":"Projects"
+  },
+  "services":{
+    "heroTitle":"Services"
+  },
+"contact": {
+  "heroTitle":"Contact",
+  "title": "Contact Information",
+  "emailTitle": "Email Address",
+  "phoneTitle": "Phone",
+  "addressTitle": "Address",
+  "address": "121 Salatin Asgarova Street, Baku, Azerbaijan"
+},
+  "common": {
+    "readMore": "Read More"
+  },
+  "footer": {
+    "slogan": "Projects Built with Professionalism",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "projects": "Projects",
+    "partners": "Partners",
+    "contact": "Contact",
+    "contactInfo": "Contact Information",
+    "address": "Salatin Asgarova 121",
+    "rights": "© All rights reserved.",
+    "developedBy": "Website developed by: Birsayt.az"
   }
 }

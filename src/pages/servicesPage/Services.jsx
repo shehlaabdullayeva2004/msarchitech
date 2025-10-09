@@ -6,7 +6,7 @@ import bgImage from "../../assets/images/servicesPageHero.webp";
 export default function ServicesPage() {
   return (
     <>
-      <AboutHeroSec title={"Xidmətlər"} bgImage={bgImage}/>
+      <AboutHeroSec title={"services.heroTitle"} bgImage={bgImage}/>
       <ServicesContainer />
     </>
   );
