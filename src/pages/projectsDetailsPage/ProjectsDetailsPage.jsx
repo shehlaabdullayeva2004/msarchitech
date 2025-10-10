@@ -2,13 +2,17 @@ import React from "react";
 import AboutProjects from "../../components/aboutProjects/AboutProjects";
 import AboutHeroSec from "../../components/aboutHeroSection/AboutHeroSec";
 import BgImage from "../../assets/images/projectsHeroBg.webp";
+import { useParams } from "react-router-dom";
 
-
-export default function ProjectsPage() {
+function ProjectsDetailsPage() {
+  const { id } = useParams();
   return (
-    <>
+    <div>
+      {" "}
       <AboutHeroSec title={"projects.heroTitle"} bgImage={BgImage} />
-      <AboutProjects />
-    </>
+      <AboutProjects id={id} />
+    </div>
   );
 }
+
+export default ProjectsDetailsPage;

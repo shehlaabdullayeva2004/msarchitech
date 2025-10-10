@@ -14,6 +14,9 @@ import { useEffect, useState } from "react";
 import Loader from "./components/loader/Loader";
 import NotFoundPage from "./pages/notFoundPage/NotFoundPage";
 import LanguageRedirect from "./components/languageRedirect/LanguageRedirect";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import ProjectsDetailsPage from "./pages/projectsDetailsPage/projectsDetailsPage";
 
 function App() {
   const [loader, setLoader] = useState(true);
@@ -35,6 +38,8 @@ function App() {
             <Route path="/about-us" element={<AboutPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/projects/:id" element={<ProjectsDetailsPage />} />
+
             <Route path="/partners" element={<PartnersPage />} />
             <Route path="/contact-us" element={<ContactPage />} />
             {/* English */}
@@ -44,6 +49,8 @@ function App() {
             <Route path="/en/projects" element={<ProjectsPage />} />
             <Route path="/en/partners" element={<PartnersPage />} />
             <Route path="/en/contact-us" element={<ContactPage />} />
+            <Route path="/en/projects/:id" element={<ProjectsDetailsPage />} />
+
             {/* Russian */}
             <Route path="/ru" element={<Home />} />
             <Route path="/ru/about-us" element={<AboutPage />} />
@@ -51,6 +58,7 @@ function App() {
             <Route path="/ru/projects" element={<ProjectsPage />} />
             <Route path="/ru/partners" element={<PartnersPage />} />
             <Route path="/ru/contact-us" element={<ContactPage />} />
+            <Route path="/ru/projects/:id" element={<ProjectsDetailsPage />} />
           </Route>
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

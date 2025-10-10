@@ -13,6 +13,7 @@ import {
   removeLanguageFromPath,
 } from "../../utils/languageUtils";
 import { useTranslation } from "react-i18next";
+import axios from "axios";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Navbar() {
@@ -20,6 +21,9 @@ export default function Navbar() {
   console.log(i18n);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("Az");
+  const [showProjectsDropdown, setShowProjectsDropdown] = useState(false);
+  const [categories, setCategories] = useState([]);
+
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const languageDropdownRef = useRef(null);
@@ -95,8 +99,21 @@ export default function Navbar() {
       },
     });
   }, []);
+  // projects dropdown filtr
+  useEffect(() => {
+    const getProjects = async () => {
+      try {
+        const res = await axios.get(
+          `https://manager.msarchitectural.az/api/categories`
+        );
+        setCategories(res?.data?.data);
+      } catch (error) {
+        console.error("Error fetching projects:", error);
+      }
+    };
+    getProjects();
+  }, []);
   // Navigate Link
-
   return (
     <nav>
       <div className="navbar" ref={navbarRef}>
@@ -105,8 +122,8 @@ export default function Navbar() {
             <img src={Logo} alt="Logo" />
           </Link>
         </div>
-        <div className="d-none d-md-block">
-          <ul className="d-flex justify-content-between align-items-center">
+        <div className="d-none d-md-block ">
+          <ul className="d-flex justify-content-between align-items-center ">
             <li>
               <Link to={createLanguageAwarePath("/")}>{t("header.home")}</Link>
             </li>
@@ -121,12 +138,81 @@ export default function Navbar() {
                 {t("header.services")}
               </Link>
             </li>
-            <li>
-              <Link to={createLanguageAwarePath("/projects")}>
-                {" "}
+            
+            <li className="position-relative">
+              <Link
+                onClick={() => setShowProjectsDropdown(!showProjectsDropdown)}
+                style={{ cursor: "pointer" }}
+              >
                 {t("header.projects")}
               </Link>
+
+              {showProjectsDropdown && (
+                <ul className="projects-dropdown dropdown-menu show position-absolute d-flex flex-column">
+                  <li>
+                    <Link
+                      to={createLanguageAwarePath("/projects/")}
+                      onClick={() => setShowProjectsDropdown(false)}
+                    >
+                      Bütün Layihələr
+                    </Link>
+                  </li>
+                  {categories?.map((category, index) => (
+                    <li key={index}>
+                      <Link
+                        to={createLanguageAwarePath(
+                          `/projects/${category?.id}`
+                        )}
+                        onClick={() => setShowProjectsDropdown(false)}
+                      >
+                        {category?.name}
+                      </Link>
+                    </li>
+                  ))}
+                  {/* <li>
+                    <Link
+                      to={createLanguageAwarePath("/projects/")}
+                      onClick={() => setShowProjectsDropdown(false)}
+                    >
+                      Bütün Layihələr
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to={createLanguageAwarePath("/projects/residential")}
+                      onClick={() => setShowProjectsDropdown(false)}
+                    >
+                      Əsaslandırma
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to={createLanguageAwarePath("/projects/non-residential")}
+                      onClick={() => setShowProjectsDropdown(false)}
+                    >
+                      Qeyri-yaşayış
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to={createLanguageAwarePath("/projects/concept")}
+                      onClick={() => setShowProjectsDropdown(false)}
+                    >
+                      Konsept
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to={createLanguageAwarePath("/projects/interior")}
+                      onClick={() => setShowProjectsDropdown(false)}
+                    >
+                      İnterier həlli
+                    </Link>
+                  </li> */}
+                </ul>
+              )}
             </li>
+
             <li>
               <Link to={createLanguageAwarePath("/partners")}>
                 {" "}
@@ -163,15 +249,15 @@ export default function Navbar() {
           {isLanguageOpen && (
             <ul className="dropdown-menu show position-absolute text-light">
               <li onClick={() => handleLanguageSelect("az")}>
-                <span className="dropdown-item">Az</span>
+                <span className="">Az</span>
               </li>
               <hr className="m-0 p-0" />
               <li onClick={() => handleLanguageSelect("en")}>
-                <span className="dropdown-item">En</span>
+                <span className="">En</span>
               </li>
               <hr className="m-0 p-0" />
               <li onClick={() => handleLanguageSelect("ru")}>
-                <span className="dropdown-item">Ru</span>
+                <span className="">Ru</span>
               </li>
             </ul>
           )}

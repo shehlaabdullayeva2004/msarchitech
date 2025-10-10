@@ -8,23 +8,24 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useTranslation } from "react-i18next";
 
-export default function AboutProjects() {
+export default function AboutProjects({ id }) {
   const [projects, setProjects] = useState([]);
   const [modal, setModal] = useState(false);
   const [activeImages, setActiveImages] = useState([]);
-
+  const { t, i18n } = useTranslation();
   useEffect(() => {
     axios
-      .get("https://manager.msarchitectural.az/api/projects")
-      .then((res) => setProjects(res.data.data || []))
+      .get(`https://manager.msarchitectural.az/api/categories/${id}/projects`)
+      .then((res) => setProjects(res?.data?.data || []))
       .catch((err) => console.log(err));
-  }, []);
+  }, [id]);
   const handleOpenModal = (images) => {
     setActiveImages(images || []);
     setModal(true);
   };
-
+  console.log(projects);
   const handleCloseModal = () => setModal(false);
 
   return (
@@ -32,18 +33,23 @@ export default function AboutProjects() {
       <section id="about-projects">
         <div className="projects-content container-fluid ">
           <div className="row ">
-            {projects.map((project, index) => {
-              const className =
-                   "col-12 col-lg-4 mb-3";
-              return (
-                <div key={project.id || index} className={className}>
-                  <AboutProjectCard
-                    project={project}
-                    onShowImages={() => handleOpenModal(project.projectImages)}
-                  />
-                </div>
-              );
-            })}
+            {projects.length > 0 ? (
+              projects.map((project, index) => {
+                const className = "col-12 col-lg-4 mb-3";
+                return (
+                  <div key={project.id || index} className={className}>
+                    <AboutProjectCard
+                      project={project}
+                      onShowImages={() =>
+                        handleOpenModal(project.projectImages)
+                      }
+                    />
+                  </div>
+                );
+              })
+            ) : (
+              <h1 className="text-center text-white fs-4">Layihə mövcud deyil</h1>
+            )}
           </div>
         </div>
       </section>

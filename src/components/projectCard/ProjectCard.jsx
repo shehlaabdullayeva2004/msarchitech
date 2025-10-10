@@ -1,5 +1,6 @@
 import React from "react";
 import "./Style.scss";
+import i18n from "../../i18n/i18next";
 
 export default function ProjectCard({ project }) {
   const baseUrl = "https://manager.msarchitectural.az";
@@ -13,7 +14,7 @@ export default function ProjectCard({ project }) {
         }}
       >
         <div className="card-name">
-          <p>{project.projectName}</p>
+          <p>{project.projectName?.[i18n.language] || "No title"}</p>
         </div>
       </div>
     </div>

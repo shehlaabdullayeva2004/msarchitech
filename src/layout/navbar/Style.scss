@@ -20,13 +20,25 @@ nav {
       height: 80px;
       object-fit: contain;
     }
-
+    .projects-dropdown{
+      gap: 20px;
+      padding: 10px 20px;
+      background-color: #222222;
+      color: #fff;
+      
+      
+     
+      li{
+        margin: 0;
+      }
+    }
     ul {
       padding: 0;
       margin: 0;
       list-style: none;
+     gap: 20px;
       li {
-        margin-left: 40px;
+        // margin-left: auto;
 
         a {
           text-decoration: none;
@@ -82,6 +94,14 @@ nav {
   }
 }
 
+@media screen and (max-width:768px){
+  nav{
+    ul{
+      font-size: 14px;
+      gap: 10px !important;
+    }
+  }
+}
 @media screen and (max-width: 576px) {
   nav {
     height: 70px !important;
