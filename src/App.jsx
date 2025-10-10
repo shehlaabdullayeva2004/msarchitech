@@ -16,7 +16,7 @@ import NotFoundPage from "./pages/notFoundPage/NotFoundPage";
 import LanguageRedirect from "./components/languageRedirect/LanguageRedirect";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import ProjectsDetailsPage from "./pages/projectsDetailsPage/projectsDetailsPage";
+import ProjectsDetailsPage from "./pages/projectsDetailsPage/ProjectsDetailsPage";
 
 function App() {
   const [loader, setLoader] = useState(true);
