@@ -7,6 +7,8 @@ import "./Style.scss";
 import Logo from "../../assets/images/logo.webp";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IoCloseOutline } from "react-icons/io5";
+import { IoIosArrowDown } from "react-icons/io";
+
 import {
   getCurrentLanguage,
   addLanguageToPath,
@@ -18,7 +20,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
-  console.log(i18n);
+  // console.log(i18n);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("Az");
   const [showProjectsDropdown, setShowProjectsDropdown] = useState(false);
@@ -114,6 +116,19 @@ export default function Navbar() {
     getProjects();
   }, []);
   // Navigate Link
+  useEffect(() => {
+    const isMobile = window.innerWidth < 768; // breakpoint
+    if (isOpen && isMobile) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
   return (
     <nav>
       <div className="navbar" ref={navbarRef}>
@@ -138,7 +153,7 @@ export default function Navbar() {
                 {t("header.services")}
               </Link>
             </li>
-            
+
             <li className="position-relative">
               <Link
                 onClick={() => setShowProjectsDropdown(!showProjectsDropdown)}
@@ -165,50 +180,13 @@ export default function Navbar() {
                         )}
                         onClick={() => setShowProjectsDropdown(false)}
                       >
-                        {category?.name}
+                        {typeof category?.name === "object"
+                          ? category?.name?.[currentLanguage] ||
+                            category?.name?.az
+                          : category?.name}
                       </Link>
                     </li>
                   ))}
-                  {/* <li>
-                    <Link
-                      to={createLanguageAwarePath("/projects/")}
-                      onClick={() => setShowProjectsDropdown(false)}
-                    >
-                      Bütün Layihələr
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to={createLanguageAwarePath("/projects/residential")}
-                      onClick={() => setShowProjectsDropdown(false)}
-                    >
-                      Əsaslandırma
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to={createLanguageAwarePath("/projects/non-residential")}
-                      onClick={() => setShowProjectsDropdown(false)}
-                    >
-                      Qeyri-yaşayış
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to={createLanguageAwarePath("/projects/concept")}
-                      onClick={() => setShowProjectsDropdown(false)}
-                    >
-                      Konsept
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to={createLanguageAwarePath("/projects/interior")}
-                      onClick={() => setShowProjectsDropdown(false)}
-                    >
-                      İnterier həlli
-                    </Link>
-                  </li> */}
                 </ul>
               )}
             </li>
@@ -232,7 +210,7 @@ export default function Navbar() {
           className="language-section d-flex align-items-center gap-1 position-relative"
         >
           <div
-            className="d-flex align-items-center gap-2"
+            className="d-flex align-items-center justify-content-center gap-1"
             onClick={toggleLanguageDropdown}
             style={{ cursor: "pointer" }}
           >
@@ -247,7 +225,7 @@ export default function Navbar() {
             ></i>
           </div>
           {isLanguageOpen && (
-            <ul className="dropdown-menu show position-absolute text-light">
+            <ul className="dropdown-menu show position-absolute text-light  ">
               <li onClick={() => handleLanguageSelect("az")}>
                 <span className="">Az</span>
               </li>
@@ -270,16 +248,16 @@ export default function Navbar() {
         </div>
 
         {/* Mobile menu */}
-        <div
-          className={`bar-content  ${isOpen ? "active" : ""}`}
-          ref={navbarRef}
-        >
+        <div className={`bar-content  ${isOpen ? "active" : ""}`}>
           <IoCloseOutline
             className="fs-1 mt-4 mx-4"
             onClick={() => setIsOpen(false)}
           />
 
-          <ul className="d-flex flex-column gap-2 ">
+          <ul
+            className="d-flex flex-column gap-2 "
+            onClick={() => setIsOpen(false)}
+          >
             <li>
               <Link to="/">Ana səhifə</Link>
             </li>
@@ -291,8 +269,42 @@ export default function Navbar() {
               <Link to="/services">Xidmətlər</Link>
             </li>
             <li>
-              <Link to="/projects">Layihələr</Link>
+              <Link
+                className="projects-toggle d-flex align-items-center justify-content-between"
+                onClick={() => setShowProjectsDropdown(!showProjectsDropdown)}
+                style={{ cursor: "pointer" }}
+              >
+                <span>Layihələr</span>
+                <IoIosArrowDown
+                  size={20}
+                  className={showProjectsDropdown ? "rotate" : ""}
+                />
+              </Link>
+
+              {showProjectsDropdown && (
+                <ul className="projects-dropdown dropdown-menu show d-flex flex-column gap-1 mt-2">
+                  <li>
+                    <Link to="/projects" onClick={() => setIsOpen(false)}>
+                      Bütün Layihələr
+                    </Link>
+                  </li>
+                  {categories?.map((category, index) => (
+                    <li key={index}>
+                      <Link
+                        to={`/projects/${category?.id}`}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {typeof category?.name === "object"
+                          ? category?.name?.[currentLanguage] ||
+                            category?.name?.az
+                          : category?.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
+
             <li>
               <Link to="/partners">Tərəfdaşlar</Link>
             </li>

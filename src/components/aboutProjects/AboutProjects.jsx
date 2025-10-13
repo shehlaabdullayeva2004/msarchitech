@@ -15,17 +15,21 @@ export default function AboutProjects({ id }) {
   const [modal, setModal] = useState(false);
   const [activeImages, setActiveImages] = useState([]);
   const { t, i18n } = useTranslation();
-  useEffect(() => {
-    axios
-      .get(`https://manager.msarchitectural.az/api/categories/${id}/projects`)
-      .then((res) => setProjects(res?.data?.data || []))
-      .catch((err) => console.log(err));
-  }, [id]);
+ useEffect(() => {
+   const url = id
+     ? `https://manager.msarchitectural.az/api/categories/${id}/projects`
+     : `https://manager.msarchitectural.az/api/projects`;
+
+   axios
+     .get(url)
+     .then((res) => setProjects(res?.data?.data || []))
+     .catch((err) => console.error("Error fetching projects:", err));
+ }, [id]);
   const handleOpenModal = (images) => {
     setActiveImages(images || []);
     setModal(true);
   };
-  console.log(projects);
+  // console.log(projects);
   const handleCloseModal = () => setModal(false);
 
   return (

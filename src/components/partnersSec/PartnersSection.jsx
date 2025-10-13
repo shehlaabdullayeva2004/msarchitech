@@ -10,10 +10,10 @@ export default function PartnersSection() {
     axios
       .get("https://manager.msarchitectural.az/api/partners")
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         setPartners(res.data.data || []);
       })
-      .catch((err) => console.log(err));
+      // .catch((err) => console.log(err));
   }, []);
 
   return (
