@@ -4,9 +4,13 @@ import ProjectCard from "../projectCard/ProjectCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
-
+import {
+  getCurrentLanguage,
+  addLanguageToPath,
+  removeLanguageFromPath,
+} from "../../utils/languageUtils";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./Style.scss";
@@ -14,7 +18,14 @@ import { useTranslation } from "react-i18next";
 
 export default function ProjectsSec() {
   const [projects, setProjects] = useState([]);
-  const { t } = useTranslation(); 
+  const { t, i18n } = useTranslation();
+  const { pathname } = useLocation();
+  // Get current language from URL BAXXXXXXXXXXXXXXXX BUNA
+  const currentLanguage = getCurrentLanguage(pathname);
+  const createLanguageAwarePath = (path) => {
+    return addLanguageToPath(path, currentLanguage);
+  };
+
 
   useEffect(() => {
     axios
@@ -66,7 +77,9 @@ export default function ProjectsSec() {
         </div>
 
         <button className="primary-button mt-3">
-          <Link to="/projects">{t("common.readMore")}</Link>
+          <Link to={createLanguageAwarePath("/projects")}>
+            {t("common.readMore")}
+          </Link>
         </button>
       </div>
     </section>

@@ -1,15 +1,26 @@
 import React, { useEffect } from "react";
 import "./Style.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import AOS from "aos";
 import { useTranslation } from "react-i18next";
+import {
+  getCurrentLanguage,
+  addLanguageToPath,
+  removeLanguageFromPath,
+} from "../../utils/languageUtils";
 
 export default function ServicesSection() {
   useEffect(() => {
     AOS.init({ duration: 800, once: false });
   }, []);
 
-  const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const { pathname } = useLocation();
+    // Get current language from URL BAXXXXXXXXXXXXXXXX BUNA
+    const currentLanguage = getCurrentLanguage(pathname);
+    const createLanguageAwarePath = (path) => {
+      return addLanguageToPath(path, currentLanguage);
+    };
   const servicesList = [
     {
       id: 1,
@@ -52,7 +63,9 @@ export default function ServicesSection() {
             ))}
           </ul>
           <button className="primary-button">
-            <Link to={"services"}>{t("common.readMore")}</Link>
+            <Link to={createLanguageAwarePath("/services")}>
+              {t("common.readMore")}
+            </Link>
           </button>
         </div>
       </div>

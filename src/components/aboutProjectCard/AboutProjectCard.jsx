@@ -17,7 +17,7 @@ export default function AboutProjectCard({ project, onShowImages }) {
       <div className="card-content d-flex flex-column flex-sm-row align-items-center">
         <div className="project-text d-flex w-100 justify-content-between flex-column ">
           <h3>{project.projectName?.[i18n.language] || "No title"}</h3>
-          <h2>{project.projectName?.[i18n.language]}</h2>
+          {/* <h2>{project.projectName?.[i18n.language]}</h2> */}
           <p className="location">
             <span className="dot">•</span>{" "}
             {project.location?.[i18n.language] || ""}

@@ -1,11 +1,21 @@
 import React from "react";
 import "./Style.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
+import {
+  getCurrentLanguage,
+  addLanguageToPath,
+  removeLanguageFromPath,
+} from "../../utils/languageUtils";
 export default function HeroSection() {
   const { t, i18n } = useTranslation();
-  
+  const { pathname } = useLocation();
+  // Get current language from URL BAXXXXXXXXXXXXXXXX BUNA
+  const currentLanguage = getCurrentLanguage(pathname);
+  const createLanguageAwarePath = (path) => {
+    return addLanguageToPath(path, currentLanguage);
+  };
+
   return (
     <section id="hero-sec">
       <div className="hero-sec">
@@ -14,7 +24,9 @@ export default function HeroSection() {
           <p>{t("home.heroSection.subtitle")}</p>
           <button className="primary-button">
             {" "}
-            <Link to={"projects"}>{t("common.readMore")}</Link>
+            <Link to={createLanguageAwarePath("/about-us")}>
+              {t("common.readMore")}
+            </Link>
           </button>
         </div>
       </div>

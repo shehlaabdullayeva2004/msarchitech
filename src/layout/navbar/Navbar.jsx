@@ -20,7 +20,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
-  // console.log(i18n);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("Az");
   const [showProjectsDropdown, setShowProjectsDropdown] = useState(false);
@@ -128,6 +127,10 @@ export default function Navbar() {
       document.body.style.overflow = "auto";
     };
   }, [isOpen]);
+// mobile link click
+  const handleMobileLinkClick = (isProject = false) => {
+    if (!isProject) setIsOpen(false);
+  };
 
   return (
     <nav>
@@ -154,22 +157,35 @@ export default function Navbar() {
               </Link>
             </li>
 
-            <li className="position-relative">
+            <li
+              className={` position-relative ${
+                showProjectsDropdown ? "active" : ""
+              }`}
+            >
               <Link
-                onClick={() => setShowProjectsDropdown(!showProjectsDropdown)}
+                className="projects-toggle d-flex align-items-center gap-2"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setShowProjectsDropdown(!showProjectsDropdown);
+                }}
                 style={{ cursor: "pointer" }}
               >
-                {t("header.projects")}
+                <span className="projects-label">{t("header.projects")}</span>
+                <IoIosArrowDown
+                  className={`projects-arrow ${
+                    showProjectsDropdown ? "rotate" : ""
+                  }`}
+                />
               </Link>
 
               {showProjectsDropdown && (
-                <ul className="projects-dropdown dropdown-menu show position-absolute d-flex flex-column">
+                <ul className="projects-dropdown show position-absolute d-flex flex-column">
                   <li>
                     <Link
                       to={createLanguageAwarePath("/projects/")}
                       onClick={() => setShowProjectsDropdown(false)}
                     >
-                      Bütün Layihələr
+                      {t("header.allProjects")}
                     </Link>
                   </li>
                   {categories?.map((category, index) => (
@@ -249,50 +265,65 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         <div className={`bar-content  ${isOpen ? "active" : ""}`}>
-          <IoCloseOutline
-            className="fs-1 mt-4 mx-4"
-            onClick={() => setIsOpen(false)}
-          />
+          <div className="w-100  row   d-flex justify-content-between pt-3 ">
+            <div className="bar-logo col-6  ">
+              <img src={Logo} alt="" />
+            </div>
+            <IoCloseOutline
+              className="fs-1 mt-3  col-2 text-end "
+              onClick={() => setIsOpen(false)}
+            />
+          </div>
+          <hr />
 
           <ul
             className="d-flex flex-column gap-2 "
-            onClick={() => setIsOpen(false)}
+            // onClick={() => setIsOpen(false)}
           >
-            <li>
-              <Link to="/">Ana səhifə</Link>
+            <li onClick={() => setIsOpen(false)}>
+              <Link to={createLanguageAwarePath("/")}>{t("header.home")}</Link>
             </li>
 
-            <li>
-              <Link to="/about-us">Haqqımızda</Link>
+            <li onClick={() => setIsOpen(false)}>
+              <Link to={createLanguageAwarePath("/about-us")}>
+                {t("header.aboutUs")}
+              </Link>
             </li>
-            <li>
-              <Link to="/services">Xidmətlər</Link>
+
+            <li onClick={() => setIsOpen(false)}>
+              <Link to={createLanguageAwarePath("/services")}>
+                {t("header.services")}
+              </Link>
             </li>
-            <li>
+            <li onClick={() => setIsOpen(true)}>
               <Link
-                className="projects-toggle d-flex align-items-center justify-content-between"
+                className="projects-dropdown d-flex align-items-center justify-content-between"
                 onClick={() => setShowProjectsDropdown(!showProjectsDropdown)}
-                style={{ cursor: "pointer" }}
               >
-                <span>Layihələr</span>
+                <span>{t("header.projects")}</span>
                 <IoIosArrowDown
-                  size={20}
-                  className={showProjectsDropdown ? "rotate" : ""}
+                  className={`projects-arrow ${
+                    showProjectsDropdown ? "rotate" : ""
+                  }`}
                 />
               </Link>
 
               {showProjectsDropdown && (
-                <ul className="projects-dropdown dropdown-menu show d-flex flex-column gap-1 mt-2">
-                  <li>
-                    <Link to="/projects" onClick={() => setIsOpen(false)}>
-                      Bütün Layihələr
+                <ul
+                  onClick={() => setIsOpen(false)}
+                  className="projects-dropdown show d-flex flex-column gap-1 mt-2"
+                >
+                  <li >
+                    <Link to={createLanguageAwarePath("/projects")}>
+                      {t("header.allProjects")}
                     </Link>
                   </li>
                   {categories?.map((category, index) => (
-                    <li key={index}>
+                    <li key={index} onClick={() => setIsOpen(true)}>
                       <Link
-                        to={`/projects/${category?.id}`}
-                        onClick={() => setIsOpen(false)}
+                        to={createLanguageAwarePath(
+                          `/projects/${category?.id}`
+                        )}
                       >
                         {typeof category?.name === "object"
                           ? category?.name?.[currentLanguage] ||
@@ -305,11 +336,11 @@ export default function Navbar() {
               )}
             </li>
 
-            <li>
-              <Link to="/partners">Tərəfdaşlar</Link>
+            <li onClick={() => setIsOpen(false)}>
+              <Link to="/partners"> {t("header.partners")}</Link>
             </li>
-            <li>
-              <Link to="/contact-us">Əlaqə</Link>
+            <li onClick={() => setIsOpen(false)}>
+              <Link to="/contact-us"> {t("header.contact")}</Link>
             </li>
           </ul>
         </div>

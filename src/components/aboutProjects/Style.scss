@@ -14,13 +14,15 @@
 }
 .swiper-button-next,
 .swiper-button-prev {
-  font-size: 10px !important; 
-  color: #fff !important;
+  color: #ffffff !important;
   width: 30px !important;
   height: 30px !important;
 }
 .swiper-pagination-bullet-active {
   background: #fff !important; 
+}
+.btn-close{
+  filter: invert(1); 
 }
 
 .modal-content {
@@ -34,6 +36,7 @@
   margin: 0 auto;  
   display: block;
   object-fit: contain; 
+  padding: 40px;
   
 }
 @media (max-width:576px){

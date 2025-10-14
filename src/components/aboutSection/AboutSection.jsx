@@ -1,11 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Style.scss";
 import { useTranslation } from "react-i18next";
+import {
+  getCurrentLanguage,
+  addLanguageToPath,
+  removeLanguageFromPath,
+} from "../../utils/languageUtils";
 
 export default function AboutSec() {
   const { t } = useTranslation();
-  
+    const { pathname } = useLocation();
+    // Get current language from URL BAXXXXXXXXXXXXXXXX BUNA
+    const currentLanguage = getCurrentLanguage(pathname);
+    const createLanguageAwarePath = (path) => {
+      return addLanguageToPath(path, currentLanguage);
+    };
   return (
     <section id="about-sec">
       <div className="about-sec">
@@ -20,7 +30,7 @@ export default function AboutSec() {
             <p>{t("home.aboutSection.subtitle")}</p>
           </div>
           <button className="primary-button d-block d-md-none  ">
-            <Link>Daha Ətraflı</Link>
+            <Link>{t("common.readMore")}</Link>
           </button>
         </div>
       </div>
