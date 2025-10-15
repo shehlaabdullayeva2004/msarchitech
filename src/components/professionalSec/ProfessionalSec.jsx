@@ -4,17 +4,18 @@ import ProfessionalSecImg from "../../assets/images/professionalImg.webp";
 import { Link } from "react-router-dom";
 import { GoDotFill } from "react-icons/go";
 import { useTranslation } from "react-i18next";
+import SectionImg from "../../assets/images/ProfessionalBg.webp";
 
 export default function Professional() {
   const { t } = useTranslation();
 
   return (
     <section id="professional">
-      <div className="professional container-fluid row">
-        <div className="left-side col-12 col-lg-5 ">
-          <img src={ProfessionalSecImg} alt="" />
-        </div>
-        <div className="right-side col-12 col-lg-7 ">
+      <div className="professional container-fluid g-0 ">
+        {/* <div className="left-side col-12 col-lg-5 ">
+            <img src={ProfessionalSecImg} alt="" />
+          </div> */}
+        <div className="right-side  ">
           <div className="top">
             <h1>{t("about.professionsSection.title")}</h1>
             <p>{t("about.professionsSection.subtitle")}</p>
@@ -42,12 +43,12 @@ export default function Professional() {
               </li>
             </ul>
             <button className="primary-button">
-              <Link to={"/projects"}>
-                {" "}
-                {t("common.readMore")}
-              </Link>
+              <Link to={"/projects"}> {t("common.readMore")}</Link>
             </button>
           </div>
+        </div>
+        <div className="section-bottom pt-5">
+          <img src={SectionImg} alt=""  />
         </div>
       </div>
     </section>

@@ -4,28 +4,26 @@
   background-color: $primary-background;
   color: #ffff;
   min-height: 60vh;
-  padding: 7rem 5%;
-  .left-side {
-    min-height:50vh;
-    padding-right: 5%;
-  }
+  padding-inline: 5%;
+  padding-bottom: 1rem;
+
   .right-side {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     .top {
       border-bottom: 1px solid #e2e2e2;
-      // padding-bottom: 10px;
+      padding-top: 20px;
       h1 {
         padding-bottom: 20px;
-        font-size: 42px;
+        font-size: 40px;
       }
       p {
         font-size: 20px;
       }
     }
     .bottom {
-        padding-top: 50px;
+        padding-top: 30px;
         p{
             color: $primary-text-color;
         }
@@ -38,6 +36,9 @@
             color: $primary-text-color;
             span{
               padding-right: 10px;
+            }
+            i{
+              padding-right: 10px;
               font-size: 20px;
             }
         }
@@ -45,40 +46,58 @@
       }
     }
   }
+  
+  .section-bottom{
+    height: 70vh;
+    img{
+      height: 100%;
+        object-position: center 50%;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+  }
+
+}
+@media (min-width:576px) and (max-width:768px){
+    #professional {
+    
+       .section-bottom{
+          height: 400px !important;
+      }
+    }
 }
 @media (max-width: 576px) {
   #professional {
-    .professional {
-      display: flex;
-      flex-direction: column-reverse;
-    }
-    .left-side {
-      min-height: 50vh !important;
-      padding: 2rem 0;
-    }
     .right-side {
       .top {
-        padding-bottom: 10px !important;
         h1 {
-          font-size: 30px !important;
+          font-size: 20px !important;
         }
         p {
-          font-size: 16px !important;
+          font-size: 14px !important;
         }
       }
       .bottom{
         padding-top: 20px !important;
         p{
             font-size: 14px !important;
-
         }
         ul{
             padding-top: 10px;
+            gap: 20px !important;
             li{
                 font-size: 14px !important;
-            }
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+              }
         }
       }
+    }
+     .section-bottom{
+        height: 200px !important;
+        border-radius: 10px !important;
     }
   }
 }

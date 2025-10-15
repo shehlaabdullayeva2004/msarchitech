@@ -10,7 +10,7 @@ export default function AboutPage() {
     <>
       <AboutHeroSec title={"about.heroTitle"} bgImage={bgImage}/>
       <WhoAreWeSec />
-      <Appreciation />
+      {/* <Appreciation /> */}
       <Professional />
     </>
   );

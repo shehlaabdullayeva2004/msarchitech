@@ -7,14 +7,14 @@ export default function WhoAreWeSec() {
   const { t } = useTranslation();
   return (
     <section id="who-are-we">
-      <div className="who-are-we-sec container-fluid">
+      <div className="who-are-we-sec container-fluid g-0">
         <div className="section-top">
           <h1>{t("about.whoAreWe")}</h1>
           <p>{t("about.whoAreWeText")}</p>
         </div>
-        <div className="section-bottom">
+        {/* <div className="section-bottom">
           <img src={SectionImg} alt="" />
-        </div>
+        </div> */}
       </div>
     </section>
   );

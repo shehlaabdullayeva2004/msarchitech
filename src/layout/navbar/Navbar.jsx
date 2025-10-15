@@ -180,15 +180,17 @@ export default function Navbar() {
 
               {showProjectsDropdown && (
                 <ul className="projects-dropdown show position-absolute d-flex flex-column">
-                  <li>
+                  {/* <li>
                     <Link
                       to={createLanguageAwarePath("/projects/")}
                       onClick={() => setShowProjectsDropdown(false)}
                     >
                       {t("header.allProjects")}
                     </Link>
-                  </li>
-                  {categories?.map((category, index) => (
+                  </li> */}
+                  {categories?.slice()
+                    .reverse()
+                    .map((category, index) => (
                     <li key={index}>
                       <Link
                         to={createLanguageAwarePath(

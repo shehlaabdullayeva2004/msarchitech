@@ -3,7 +3,7 @@
 #who-are-we{
     background-color:$primary-background;
     color: #ffff;
-    padding: 5rem 5%;
+    padding: 4rem 5%;
     margin-top: 50vh;
     .section-top{
         padding-bottom: 30px;
@@ -19,14 +19,15 @@
     }
 }
 @media (max-width:576px){
+    #who-are-we{
+        padding: 1rem 5% !important;
+    }
     .who-are-we-sec{
         .section-top{
             p{
                 font-size: 14px !important;
             }
         }
-        .section-bottom{
-            height: 30vh !important;
-        }
+       
     }
 }
