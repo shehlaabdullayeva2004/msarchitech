@@ -38,7 +38,8 @@ export default function AboutProjects({ id }) {
         <div className="projects-content container-fluid ">
           <div className="row ">
             {projects.length > 0 ? (
-              projects.map((project, index) => {
+              projects
+                ?.slice().reverse().map((project, index) => {
                 const className = "col-12 col-lg-4 mb-3";
                 return (
                   <div key={project.id || index} className={className}>
