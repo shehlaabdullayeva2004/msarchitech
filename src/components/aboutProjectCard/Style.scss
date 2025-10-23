@@ -2,6 +2,9 @@
   color: #fff;
   height: auto;
   position: relative;
+  height: 450px;
+  border-radius: 10px !important;
+  overflow: hidden;
 &:hover{
   cursor: pointer;
   .project-text{
@@ -15,18 +18,20 @@
 }
  
   .img {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center ;
-    height: 450px;
-    overflow: hidden;
-    border-radius: 10px;
-    position: relative; 
-    z-index: 0;
+       background-repeat: no-repeat;
+  background-position: center ;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  z-index: 0;
     img {
-      transition: all 0.3s ease-in-out;
-      height: 100%;
-      z-index: 1;
+       width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center 0%; 
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
     }
 
     &::after {

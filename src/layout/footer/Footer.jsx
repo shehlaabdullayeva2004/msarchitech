@@ -106,7 +106,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom d-flex align-items-center justify-content-between flex-wrap">
-          <p>msarchitech.az © {t("footer.contactInfo")}</p>
+          <p>msarchitectural.az © {t("footer.contactInfo")}</p>
           <p>
             <Link to={"https://www.birsayt.az/"}>
               {t("footer.developedBy")} Birsayt.az

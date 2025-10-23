@@ -17,6 +17,8 @@ import LanguageRedirect from "./components/languageRedirect/LanguageRedirect";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import ProjectsDetailsPage from "./pages/projectsDetailsPage/ProjectsDetailsPage";
+import { HelmetProvider } from "react-helmet-async";
+
 
 function App() {
   const [loader, setLoader] = useState(true);
@@ -29,6 +31,7 @@ function App() {
   if (loader) return <Loader />;
 
   return (
+        <HelmetProvider>
     <BrowserRouter>
       <LanguageRedirect>
         <Routes>
@@ -62,8 +65,10 @@ function App() {
           </Route>
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
+
       </LanguageRedirect>
     </BrowserRouter>
+        </HelmetProvider>
   );
 }
 
