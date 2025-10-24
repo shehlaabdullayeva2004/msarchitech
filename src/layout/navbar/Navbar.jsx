@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Style.scss";
 // import Logo from "../../assets/images/logo.webp";
-import Logo from "../../assets/images/logo.webp";
+import Logo from "../../assets/images/barLogo.webp";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IoCloseOutline } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
@@ -267,12 +267,12 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         <div className={`bar-content  ${isOpen ? "active" : ""}`}>
-          <div className="w-100  row   d-flex justify-content-between pt-3 ">
-            <div className="bar-logo col-6  ">
+          <div className="w-100  d-flex   d-flex justify-content-between pt-3 px-4">
+            <div className="bar-logo  ">
               <img src={Logo} alt="" />
             </div>
             <IoCloseOutline
-              className="fs-1 mt-3  col-2 text-end "
+              className="fs-1 mt-3  text-end "
               onClick={() => setIsOpen(false)}
             />
           </div>
@@ -315,11 +315,7 @@ export default function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className="projects-dropdown show d-flex flex-column gap-1 mt-2"
                 >
-                  <li >
-                    <Link to={createLanguageAwarePath("/projects")}>
-                      {t("header.allProjects")}
-                    </Link>
-                  </li>
+                 
                   {categories?.map((category, index) => (
                     <li key={index} onClick={() => setIsOpen(true)}>
                       <Link
@@ -328,7 +324,7 @@ export default function Navbar() {
                         )}
                       >
                         {typeof category?.name === "object"
-                          ? category?.name?.[currentLanguage] ||
+                          ? category  ?.name?.[currentLanguage] ||
                             category?.name?.az
                           : category?.name}
                       </Link>

@@ -33,6 +33,7 @@ export default function AboutSec() {
             <Link>{t("common.readMore")}</Link>
           </button>
         </div>
+        <div className="bg"></div>
       </div>
     </section>
   );

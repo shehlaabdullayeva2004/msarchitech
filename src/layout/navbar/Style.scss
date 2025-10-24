@@ -14,7 +14,13 @@ nav {
     justify-content: space-between;
     align-items: center;
     transition: background-color 300ms ease, color 0.2s ease;
-    // language dropdown 
+    .language-section{
+
+      @media (max-width:768px){
+        margin-left: 50%;
+      }
+      
+    }
     .dropdown-menu {
       display: block;
       position: absolute;
@@ -25,8 +31,8 @@ nav {
       margin-top: 0.5rem;
       background-color: var(--white-color);
       border-radius: 8px;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      box-shadow: #32325d40 0px 6px 12px -2px,
+        #0000004d 0px 3px 7px -3px;
       li {
         cursor: pointer;
         transition: all 0.1s ease;
@@ -93,6 +99,9 @@ nav {
       padding: 10px 20px; 
      color: #fff;
      background-color: #222222;
+     @media screen and (max-width:768px){
+       background-color: transparent !important;
+     }
       
     }
     ul {
@@ -117,12 +126,13 @@ nav {
       font-size: 1.5rem;
       cursor: pointer;
     }
-    .bar-logo{
-      img{
-        // width: 100%;
-        height: 70px;
-      }
-    }
+    // .bar-logo{
+    //   img{
+    //     // width: auto;
+    //     // height: 80px;
+    //     // object-fit: contain;
+    //   }
+    // }
 
     .bar-content {
       position: fixed;
@@ -169,7 +179,7 @@ nav {
     .projects-dropdown{
       gap: 0 !important;
       margin: 0 !important;
-      background-color: transparent !important;
+     
       li{
         margin: 5px !important;
       }
